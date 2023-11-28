@@ -1,0 +1,18 @@
+{{!-- Vista “realTimeProducts.handlebars”, la cual vivirá en el endpoint “/realtimeproducts” en nuestro views router, ésta contendrá la misma lista de productos, sin embargo, ésta trabajará con websockets.
+Al trabajar con websockets, cada vez que creemos un producto nuevo, o bien cada vez que eliminemos un producto, se debe actualizar automáticamente en dicha vista la lista.
+ --}}
+
+<h2>Socket</h2>
+
+<div>
+  <p id="products">{{title}} </p>
+  <p >{{price}} </p>
+</div>
+
+{{!-- el cliente también necesita instanciar su socket, entonces lo colocamos en un script --}}
+
+<script src="/socket.io/socket.io.js"></script>
+
+{{!-- Creamos un index.js en la carpeta public/js/ y la referenciamos en nuestro index.handlebars  --}}
+
+<script src="js/index.js" charset="utf-8"></script>

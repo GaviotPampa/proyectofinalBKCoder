@@ -1,0 +1,61 @@
+[2023-11-26 11:10:25] error title is not defined
+[2023-11-26 11:25:13] error title is not defined
+[2023-11-26 11:29:10] error title is not defined
+[2023-11-26 11:29:40] error title is not defined
+[2023-11-26 11:42:23] error title is not defined
+[2023-11-26 11:42:43] error title is not defined
+[2023-11-26 11:43:54] error marca is not defined
+[2023-11-26 11:44:25] error marca is not defined
+[2023-11-26 11:44:40] error marca is not defined
+[2023-11-26 11:44:54] error marca is not defined
+[2023-11-26 11:46:23] error Cannot set properties of undefined (setting 'importe')
+[2023-11-26 11:47:43] error this.dao.create is not a function
+[2023-11-26 11:48:05] error this.dao.create is not a function
+[2023-11-26 11:49:38] error this.dao.create is not a function
+[2023-11-26 11:51:27] error this.dao.create is not a function
+[2023-11-26 11:54:35] error this.dao.create is not a function
+[2023-11-26 11:55:30] error this.dao.create is not a function
+[2023-11-26 12:04:54] error prodDao.create is not a function
+[2023-11-26 14:52:33] error products validation failed: titulo: Path `titulo` is required.
+[2023-11-26 14:52:54] error E11000 duplicate key error collection: ecommerce.products index: code_1 dup key: { code: null }
+[2023-11-26 14:53:33] error E11000 duplicate key error collection: ecommerce.products index: code_1 dup key: { code: null }
+[2023-11-26 14:53:56] error E11000 duplicate key error collection: ecommerce.products index: code_1 dup key: { code: null }
+[2023-11-26 14:54:26] error E11000 duplicate key error collection: ecommerce.products index: code_1 dup key: { code: null }
+[2023-11-26 14:55:14] error E11000 duplicate key error collection: ecommerce.products index: code_1 dup key: { code: null }
+[2023-11-26 14:55:44] error products validation failed: titulo: Path `titulo` is required.
+[2023-11-26 14:56:11] error products validation failed: titulo: Path `titulo` is required.
+[2023-11-26 14:56:50] error E11000 duplicate key error collection: ecommerce.products index: code_1 dup key: { code: null }
+[2023-11-26 14:57:10] error E11000 duplicate key error collection: ecommerce.products index: code_1 dup key: { code: null }
+[2023-11-26 16:38:41] error Error en la busqueda de producto por ID
+[2023-11-26 16:39:13] error Error en la busqueda de producto por ID
+[2023-11-26 16:39:37] error Error en la busqueda de producto por ID
+[2023-11-28 04:51:23] error user is not defined
+[2023-11-28 04:54:09] error user is not defined
+[2023-11-28 05:09:38] error user is not defined
+[2023-11-28 05:11:21] error user is not defined
+[2023-11-28 05:19:20] error user is not defined
+[2023-11-28 05:20:40] error error en el register user.dao data and salt arguments required
+[2023-11-28 05:47:49] error en el register en user.controllers
+[2023-11-28 05:49:50] error en el register en user.controllers
+[2023-11-28 07:14:34] error en el register user.dao users validation failed: first_name: Path `first_name` is required., last_name: Path `last_name` is required., email: Path `email` is required., age: Path `age` is required.
+[2023-11-28 07:26:59] error en el register en user.controllers
+[2023-11-28 07:27:21] error en el register en user.controllers
+[2023-11-28 07:27:27] error en el register en user.controllers
+[2023-11-28 07:28:50] error en el register user.dao users validation failed: first_name: Path `first_name` is required., last_name: Path `last_name` is required., email: Path `email` is required., age: Path `age` is required.
+[2023-11-28 07:31:18] error en el register en user.controllers
+[2023-11-28 08:05:49] error en el register en user.controllers
+[2023-11-28 08:08:25] error en el register user.dao users validation failed: first_name: Path `first_name` is required., last_name: Path `last_name` is required., email: Path `email` is required., age: Path `age` is required.
+[2023-11-28 08:11:10] error user is not defined
+[2023-11-28 08:13:00] error user is not defined
+[2023-11-28 08:15:04] error user is not defined
+[2023-11-28 08:16:12] error en el register en user.controllers
+[2023-11-28 18:09:43] error No recipients defined
+[2023-11-28 18:15:17] error No recipients defined
+[2023-11-28 18:20:59] error Cannot read properties of undefined (reading 'EMAIL_GMAIL')
+[2023-11-28 18:21:33] error Cannot read properties of undefined (reading 'destination')
+[2023-11-28 18:24:10] error en el register en user.controllers
+[2023-11-28 18:28:00] error en el register en user.controllers
+[2023-11-28 19:34:36] error undefined
+[2023-11-28 19:38:38] error undefined
+[2023-11-28 19:39:25] error undefined
+[2023-11-28 19:47:05] error undefined

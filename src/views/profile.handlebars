@@ -1,0 +1,19 @@
+<div class="contenedor-profile">
+  <h1 class="profile">Profile </h1>
+
+  {{#if user}}
+    <h2 class="profile">Hello </h2>
+    <p class="profile"> Nombre: {{user.first_name}}</p>
+    <p class="profile">role: {{user.role}}</p>
+  {{else}}
+    <h1 class="profile">Hello {{user.first_name}}</h1>
+    <p class="profile">There are nothing yet.</p>
+
+  {{/if}}
+  <div class="register">
+    <button
+      class="button btn-secudary"
+      onclick="location.href='/api/sessions/login'"
+    >Cerrar Sesión</button>
+  </div>
+</div>

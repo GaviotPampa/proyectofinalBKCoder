@@ -1,0 +1,41 @@
+<div class="contenedor-formularios">
+  <h1>LOGIN</h1>
+  <form class="form" action="/api/users/login" method="post">
+    <div class="contenedor-input">
+      <label> Email:</label>
+      <input type="email" name="email" id="email" />
+    </div>
+    <div class="contenedor-input">
+      <label>Password:</label>
+      <input type="password" name="password" id="password" />
+    </div>
+     <div class="contenedor-input">
+      <label>Role:</label>
+      <input type="role" name="role" id="role" />
+    </div>
+    <div class="login">
+      <input class="button" type="submit" value="LOGIN" />
+    </div>
+    <div class="login">
+      <button
+        class="login button"
+        onclick="location.href='/users/register-github'"
+      >entrar con Github</button>
+    </div>
+    <div class="container-new">
+      <h2 class="new-user">¿Usuario nuevo?</h2>
+    </div>
+
+    <div class="register">
+      <button
+        class="button btn-secundary"
+        onclick="location.href='/user-restart'"
+      >¿Olvidaste la contraseña?</button>
+      <button
+        class="button btn-secundary"
+        onclick="location.href='/sessions/register'"
+      >Registrate</button>
+    </div>
+
+  </form>
+</div>

@@ -1,0 +1,47 @@
+tags:
+ - name: Cart
+   sumary: Everything about cart
+paths: 
+ /api/carts:
+  get:
+   tags: 
+     - Cart
+   summary: Get all cart.
+   responses:	
+    "200":
+      description: Los productos fueron obtenidos satisfactoriamente del carrito
+      content: 
+       application/json:
+        schema:
+         type: array
+         items:
+          $ref: '#/components/schemas/Cart'
+    "500": 
+      description: Error del servidor
+  post:
+   tags:
+    - Cart
+   summary: Add a new product to the cart
+   responses:	
+    "200":
+     description: Create a new product in the cart
+    "500": 
+      description: Error del servidor
+  put:
+   tags:
+    - Cart
+   summary: Update a product in the cart
+   responses:	
+    "200":
+     description: Create a new product in the cart
+    "500": 
+     description: Error del servidor
+  delete:
+   tags:
+    - Cart
+   summary: Delete a product in the cart
+   responses:
+    "200":
+     description: Delete a product in the cart
+    "500": 
+     description: Error al eliminar product

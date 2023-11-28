@@ -1,0 +1,79 @@
+
+components:
+  schemas: 
+    Product:
+      type: object
+      required:
+       - marca
+       - importe
+       - codigo
+       - estado
+       - stock
+       - categoria
+       - owner
+      properties:
+        _id:
+          type: ObjectId
+          description: Id associated with product autogenerado por Mongo
+        marca:
+          type: string
+          description: nombre del producto
+        importe:
+         type: number
+         description: precio del producto
+        codigo:
+         type: string
+         description: codigo de identificacion unico del producto
+        estado:
+         type: string
+         description: estado del producto
+        stock:
+         type: number
+         description: cantidad disponible del producto
+        categoria:
+         type: string
+         description: categoria a la que pertenece el producto
+        owner:
+         type: ObjectId
+         description: nombre del propietario del producto
+        inCart:
+         type: boolean
+         description: si el producto esta en el carrito de compras
+      example:
+       _id: ObjectId('6511bb3867bd881e1a572d52')
+       marca: Mochila Urbana
+       import: 15000
+       codigo: abcd123
+       estado: true
+       stock: 1
+       categoria: Mochilas
+       owner: user
+       inCart: false
+    Cart:
+     type: object
+     required: 
+      - _id
+      - quantity
+     properties:
+      _id: 
+       type: string
+       description: id del carrito generado por mongo unico para cada compra
+      quantity: 
+       type: number
+       description: cantidad del producto agregado en el carrito de compras
+      products:
+       type: ObjectId
+       description: array de productos
+     example:
+      _id: 65038100db3841aeba871732
+      quantity: 3
+      products: 
+       array: [
+        6504a7048f3239c59df19e49
+        64c7f0ce6d6c644d4e02b316
+        64c7f0ce6d6c644d4e02b316
+       ]
+
+
+
+       
