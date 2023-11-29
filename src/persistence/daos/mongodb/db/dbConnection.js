@@ -1,5 +1,5 @@
 import {connect} from "mongoose";
-import {config} from '../../../../config/config.js';
+import config from "../../../config/config.js";
 import logger from '../../../../middlewares/logger-mw.js';
 
 //connection local
