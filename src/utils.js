@@ -24,12 +24,12 @@ export const isValidPassword = ( password, user ) => compareSync (password, user
 
 export const mongoStoreOptions = {
     store: MongoStore.create({
-        mongoUrl: process.env.MONGO_ATLAS_URL,
+        mongoUrl: "mongodb+srv://Gavi:zoela131@cluster0.9oharja.mongodb.net/ecommerce?retryWrites=true&w=majority",
         crypto: {
-            secret: process.env.SECRET_KEY_CRYPTO,
+            secret: "1234",
         }
     }),
-    secret: process.env.SECRET_KEY_CRYPTO,
+    secret: "1234",
     resave: false,//guarda la sesion aunque no se haya utilizado
     saveUninitialized: false,//crea ka sesion vacio
     cookie: {
