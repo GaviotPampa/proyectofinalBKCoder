@@ -25,7 +25,7 @@ export const isValidPassword = ( password, user ) => compareSync (password, user
 
 export const mongoStoreOptions = {
     store: MongoStore.create({
-        mongoUrl: config.MONGO_ATLAS_URL,
+        mongoUrl: process.env.MONGO_ATLAS_URL,
         crypto: {
             secret: config.SECRET_KEY_CRYPTO,
         }
