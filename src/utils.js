@@ -1,7 +1,6 @@
 import { dirname } from 'path';
 import { fileURLToPath } from "url";
 export const __dirname = dirname(fileURLToPath(import.meta.url));
-import config from './config/config.js';
 import MongoStore from 'connect-mongo';
 import './persistence/daos/mongodb/db/dbConnection.js';
 
@@ -27,10 +26,10 @@ export const mongoStoreOptions = {
     store: MongoStore.create({
         mongoUrl: process.env.MONGO_ATLAS_URL,
         crypto: {
-            secret: config.SECRET_KEY_CRYPTO,
+            secret: process.env.SECRET_KEY_CRYPTO,
         }
     }),
-    secret: config.SECRET_KEY_CRYPTO,
+    secret: process.env.SECRET_KEY_CRYPTO,
     resave: false,//guarda la sesion aunque no se haya utilizado
     saveUninitialized: false,//crea ka sesion vacio
     cookie: {
