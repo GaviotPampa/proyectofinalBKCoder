@@ -112,7 +112,7 @@ app
   /*** luego de los enrutadores***/
   .use(errorHandler);
 
-const PORT = config.PORT || 3000;
+const PORT = config.PORT || 8080;
 
 //////////////***Connection: server express***/////////////
 app.listen(PORT, () => {

@@ -59,3 +59,4 @@
 [2023-11-28 19:38:38] error undefined
 [2023-11-28 19:39:25] error undefined
 [2023-11-28 19:47:05] error undefined
+[2023-11-28 22:59:16] error 🚫Cannot connect to database dbConnectionMongooseError: The `uri` parameter to `openUri()` must be a string, got "undefined". Make sure the first parameter to `mongoose.connect()` or `mongoose.createConnection()` is a string.
