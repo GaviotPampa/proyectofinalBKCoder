@@ -8,7 +8,7 @@ export default class ProdDaoMDB {
       const response = await ProductModel.aggregate([
         {
           $match: {
-            categoria: "${categoria}",
+            categoria: `"${categoria}"`,
           },
         },
         {
@@ -17,7 +17,7 @@ export default class ProdDaoMDB {
             _id: 1,
           },
         },
-      ]);
+      ], {maxTimeMS:50000});
       return response;
     } catch (error) {
       logger.warning (error, "something unexpected happened: " + error.message);
