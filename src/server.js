@@ -65,37 +65,6 @@ app.use(passport.initialize()).use(passport.session());
 
 /*** inicializar rutas con prefijos***/
 
-/* app
-  .get("/setSignedCookie", (req, res) => {
-    let visits = req.signedCookies.entry
-      ? parseInt(req.signedCookies.entry) + 1
-      : 1;
-    console.log(visits); */
-//res.cookie("nombre_de_la_cokie", valor_de_la_cokie)
-/*  res
-      .cookie("entry", visits, {
-        maxAge: Date.now() + 1000 * 30,
-        signed: true,
-        secure: true,
-        httpOnly: true,
-      })
-      .send("visits:" + visits.toString());
-  })
-
-  .get("/getCookies", (req, res) => {
-    console.log(req.cookies);
-    res.send("reading cookies: " + req.cookies);
-  })
-
-  .get("/deleteCookies", (req, res) => {
-    console.log(req.cookies);
-    res.clearCookie(req.cookies).send("deleting cookies: " + req.cookies);
-  })
-
-  .use((req, res, next) => {
-    res.status(404).send("recurso no encontrado"); */ // termina
-/* });
- */
 app
   .use("/api", indexRouter)
   .use(addLogger)

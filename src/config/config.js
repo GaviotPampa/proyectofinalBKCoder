@@ -2,7 +2,7 @@ import "dotenv/config";
 
 export default {
   PORT: process.env.PORT || 8080,
-  NODE_ENV: process.env.NODE_ENV || "dev",
+  NODE_ENV: process.env.NODE_ENV || "production",
   MONGO_ATLAS_URL: process.env.MONGO_ATLAS_URL,
   MONGO_LOCAL_URL: process.env.MONGO_LOCAL_URL,
 

@@ -1,4 +1,4 @@
-import {connect} from "mongoose";
+import mongoose from "mongoose";
 import config from "../../../../config/config.js";
 import logger from '../../../../middlewares/logger-mw.js';
 
@@ -8,7 +8,7 @@ import logger from '../../../../middlewares/logger-mw.js';
 export const connectionString = config.MONGO_ATLAS_URL;
 
 try {
-  await connect(/* connectionString */
+  await mongoose.connect(/* connectionString */
   (connectionString)
    /*  config.MONGO_ATLAS_URL */
   );

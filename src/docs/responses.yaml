@@ -73,6 +73,58 @@ components:
         64c7f0ce6d6c644d4e02b316
         64c7f0ce6d6c644d4e02b316
        ]
+    User:
+      type: object
+      required:
+       - first_name
+       - last_name
+       - email
+       - age
+       - password
+       - role
+       - document
+       - last_connection
+       - cartId
+       - isGithub
+      properties:
+        _id:
+          type: ObjectId
+          description: Id associated with the user register y autogenerado por Mongo
+        first_name:
+          type: string
+          description: nombre del user
+        last_name:
+         type: string
+         description: apellido del user
+        email:
+         type: string
+         description: email associated with the user
+        age:
+         type: string
+         description: age associated with the user
+        password:
+         type: string
+         description: contraseña de login del usuario
+        role:
+         type: string
+         description: role associated with the user in the database
+        document:
+         name: string
+         reference: string
+        last_connection:
+         type: boolean
+         description: ultima conexion de login del usuario
+        cartId: 
+         type: ObjectId
+         description: carrito del usuario
+      example:
+       _id: ObjectId('6565a9aee8791a6a3ff7d9ea')
+       first_name: Galo
+       last_name: rizo
+       email: galo@mail.com
+       age: 21
+       role: user
+       inGithub: false
 
 
 
