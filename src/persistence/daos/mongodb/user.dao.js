@@ -9,10 +9,11 @@ export default class UserDao {
   
   async getAll() {
     try {
-      const response = await this.find({});
+      const response = await UserModel.find({});
+      logger.info("response en user.dao",response);
       return response;
     } catch (error) {
-      logger.error(error);
+      logger.error("error en user.dao"+ error);
     }
   }
 
@@ -77,8 +78,8 @@ export default class UserDao {
 
   async getById(id) {
     try {
-      const userExist = await UserModel.findById(id);
-      // console.log(userExist);
+      const userExist = await UserModel.findById({ _id: id });
+      console.log(userExist);
       if (userExist) {
         return userExist;
       }

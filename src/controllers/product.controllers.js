@@ -148,8 +148,8 @@ export const update = async (req, res, next) => {
     const { id } = req.params;
     const prodUpd = await service.updateProd(id, req.body);
     res.json(prodUpd);
-    if (!prodUpd) return httpResp.NotFound(res, "ERROR_UPDATE");
-    return httpResp.Ok(res, prodUpd);
+    if (!prodUpd) return httpResponse.NotFound(res, "ERROR_UPDATE");
+    return httpResponse.Ok(res, prodUpd);
   } catch (error) {
     next(error.message);
   }

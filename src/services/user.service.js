@@ -2,15 +2,16 @@ import UserDaoMongoDB from "../persistence/daos/mongodb/user.dao.js";
 const userDao = new UserDaoMongoDB();
 import logger from "../middlewares/logger-mw.js";
 
-import { getByIdDTO } from "../persistence/repositories/user/user.repository.js";
+/* import { getByIdDTO } from "../persistence/repositories/user/user.repository.js"; */
 import { sendMail } from "../controllers/gmail.controllers.js";
 
 export const getAll = async () => {
   try {
     const items = await userDao.getAll();
+    logger.info ("getAll user.service",items)
     return items;
   } catch (error) {
-    logger.error(error);
+    logger.error(error, "error getting all user.service");
   }
 };
 
@@ -115,7 +116,7 @@ export const addCartToUser = async (userId, cartId) => {
   }
 };
 
-export const getByIdDTO = async (id) => {
+/* export const getByIdDTO = async (id) => {
   try {
     const user = await userRepository.getByIdDTO(id);
     if (!user) return false;
@@ -123,7 +124,7 @@ export const getByIdDTO = async (id) => {
   } catch (error) {
     logger.error(error);
   }
-};
+}; */
 
 export const resetPass = async (user) => {
   try {

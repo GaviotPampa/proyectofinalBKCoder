@@ -81,3 +81,35 @@
 [2023-12-04 00:31:41] error E11000 duplicate key error collection: ecommerce.products index: code_1 dup key: { code: null }
 [2023-12-04 00:35:07] error E11000 duplicate key error collection: ecommerce.products index: code_1 dup key: { code: null }
 [2023-12-04 00:35:17] error E11000 duplicate key error collection: ecommerce.products index: code_1 dup key: { code: null }
+[2023-12-04 06:57:29] error E11000 duplicate key error collection: ecommerce.products index: code_1 dup key: { code: null }
+[2023-12-04 07:12:10] error service is not defined
+[2023-12-04 07:13:54] error error en user.comtroller  service is not defined
+[2023-12-04 07:41:33] error error en getById user.controller Cannot destructure property 'id' of 'req.params._id' as it is undefined.
+[2023-12-04 07:42:00] error error en getById user.controller Cannot read properties of undefined (reading 'service')
+[2023-12-04 07:42:24] error error en getById user.controller Cannot read properties of undefined (reading 'service')
+[2023-12-04 07:42:58] error error en getById user.controller Cannot read properties of undefined (reading 'service')
+[2023-12-04 07:43:33] error error en getById user.controller Cannot read properties of undefined (reading 'service')
+[2023-12-04 07:43:52] error error en getById user.controller createResponse is not defined
+[2023-12-04 07:44:15] error error en getById user.controller Cannot destructure property 'id' of 'req.params._id' as it is undefined.
+[2023-12-04 07:44:47] error error en getById user.controller Cannot destructure property 'id' of 'req.params.user' as it is undefined.
+[2023-12-04 07:45:12] error error en getById user.controller createResponse is not defined
+[2023-12-04 07:46:29] error error en getById user.controller createResponse is not defined
+[2023-12-04 07:47:05] error Cast to ObjectId failed for value "{ id: '654294d10411cc2861600fb7' }" (type Object) at path "_id" for model "users"
+[2023-12-04 07:47:05] error CastError: Cast to ObjectId failed for value "{ id: '654294d10411cc2861600fb7' }" (type Object) at path "_id" for model "users"
+[2023-12-04 07:47:05] error error en getById user.controller createResponse is not defined
+[2023-12-04 07:47:46] error error en getById user.controller createResponse is not defined
+[2023-12-04 07:47:59] error Cast to ObjectId failed for value "{ id: '654294d10411cc2861600fb7' }" (type Object) at path "_id" for model "users"
+[2023-12-04 07:47:59] error CastError: Cast to ObjectId failed for value "{ id: '654294d10411cc2861600fb7' }" (type Object) at path "_id" for model "users"
+[2023-12-04 07:47:59] error error en getById user.controller createResponse is not defined
+[2023-12-04 07:52:14] error error en getById user.controller createResponse is not defined
+[2023-12-04 07:55:51] error error en getById user.controller createResponse is not defined
+[2023-12-04 07:58:58] error error en getById user.controller createResponse is not defined
+[2023-12-04 07:59:23] error Cast to ObjectId failed for value "{ _id: { _id: '654294d10411cc2861600fb7' } }" (type Object) at path "_id" for model "users"
+[2023-12-04 07:59:23] error CastError: Cast to ObjectId failed for value "{ _id: { _id: '654294d10411cc2861600fb7' } }" (type Object) at path "_id" for model "users"
+[2023-12-04 07:59:23] error error en getById user.controller createResponse is not defined
+[2023-12-04 08:00:21] error error en getById user.controller createResponse is not defined
+[2023-12-04 08:02:48] error error en getById user.controller Cannot access 'id' before initialization
+[2023-12-04 08:05:18] error Cast to ObjectId failed for value "{ _id: undefined }" (type Object) at path "_id" for model "users"
+[2023-12-04 08:05:18] error CastError: Cast to ObjectId failed for value "{ _id: undefined }" (type Object) at path "_id" for model "users"
+[2023-12-04 08:05:18] error error en getById user.controller createResponse is not defined
+[2023-12-04 08:05:56] error error en getById user.controller createResponse is not defined

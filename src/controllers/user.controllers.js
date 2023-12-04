@@ -4,46 +4,44 @@ import { HttpResponse } from "../utils/http.response.js";
 const httpResponse = new HttpResponse();
 import { sendMail } from "./gmail.controllers.js";
 const userDao = new UserDao();
-
-
+import * as service from "../services/user.service.js";
 
 export const getAll = async (req, res, next) => {
   try {
-    const items = await this.service.getAll();
-    createResponse(res, 200, items);
+    const items = await service.getAll();
+    logger.info("getting all users in controller", items);
+    if (!items) return httpResponse.ServerError(res, "No items found ");
+    return httpResponse.Ok(res, { data: items });
+    /*     createResponse(res, 200, items);
+     */
   } catch (error) {
+    logger.error("error en user.comtroller ", error);
     next(error.message);
   }
 };
 
 export const getById = async (req, res, next) => {
   try {
-    const { id } = req.params;
-    const item = await this.service.getById(id);
+    const id = req.params.id;
+    const item = await service.getById(id);
     if (!item)
-      createResponse(res, 404, {
-        method: "service",
-        error: "Item not found",
-      });
-    else createResponse(res, 200, item);
+      return httpResponse.NotFound(res, 404, "User not found for id: " + id);
+    else httpResponse.Ok(res, item);
   } catch (error) {
+    logger.error("error en getById user.controller", error);
     next(error.message);
   }
 };
 
-
 export const update = async (req, res, next) => {
   try {
     const { id } = req.params;
-    const item = await this.service.getById(id);
-    if (!item)
-      createResponse(res, 404, {
-        method: "service",
-        error: "Item not found",
-      });
+    const item = await service.getById(id);
+    if (!item) return httpResponse.NotFound(res, 404, "ERROR_UPDATE");
     else {
-      const itemUpd = await this.service.update(id, req.body);
-      createResponse(res, 200, itemUpd);
+      const itemUpd = await service.update(id, req.body);
+
+      HttpResponse.Ok(res, itemUpd);
     }
   } catch (error) {
     next(error.message);
@@ -53,22 +51,20 @@ export const update = async (req, res, next) => {
 export const eliminate = async (req, res, next) => {
   try {
     const { id } = req.params;
-    const item = await this.service.getById(id);
+    const item = await service.getById(id);
     if (!item)
       createResponse(res, 404, {
         method: "service",
         error: "Item not found",
       });
     else {
-      const itemDel = await this.service.delete(id);
+      const itemDel = await service.delete(id);
       createResponse(res, 200, itemDel);
     }
   } catch (error) {
     next(error.message);
   }
 };
-
-
 
 /* CUANDO SE REGISTRE EL USUSARIO SE HACE ENVIO DE MAIL */
 export const register = async (req, res) => {
