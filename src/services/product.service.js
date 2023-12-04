@@ -2,7 +2,7 @@
 //desde los servicios llamamos al dao
 import ProdDaoMDB from "../persistence/daos/mongodb/product.dao.js";
 const prodDao = new ProdDaoMDB();
-import * as sevice from "../persistence/repositories/product/product.repository.js";
+import * as service from "../persistence/repositories/product/product.repository.js";
 
 
 // import { __dirname } from "../utils.js";
@@ -49,7 +49,7 @@ export const getByIdDto = async (id) => {
 
 export const createProd = async (obj) => {
   try {
-    const newProduct = await sevice.createProd(obj);
+    const newProduct = await service.createProd(obj);
     if (!newProduct) return false;
     else return newProduct;
   } catch (error) {

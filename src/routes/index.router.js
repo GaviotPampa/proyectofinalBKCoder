@@ -2,7 +2,7 @@ import { Router } from "express";
 const router = Router();
 
 /* import chatRouter from "./chats.router.js";
- */import productRouter from "./products.router.js";
+ */ import productRouter from "./products.router.js";
 import cartRouter from "./carts.router.js";
 import viewsRouter from "./views.router.js";
 import sessionRouter from "./session.router.js";
@@ -18,8 +18,8 @@ router
 
   .use("/products", productRouter)
   .use("/carts", cartRouter)
-/*   .use("/chat", chatRouter)
- */  .use("/home", homeRouter)
+  /*   .use("/chat", chatRouter)
+   */ .use("/home", homeRouter)
   .use("/tickets", ticketRouter)
   /* .use("/carts", cartIdRouter) */
   .use("/users", userRouter)

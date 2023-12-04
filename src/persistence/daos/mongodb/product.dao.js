@@ -5,22 +5,51 @@ import logger from "../../../middlewares/logger-mw.js";
 export default class ProdDaoMDB {
   async getAllProd() {
     try {
-      const response = await ProductModel.aggregate([
-        {
-          $match: {
-            categoria: `"${categoria}"`,
+      const response = await ProductModel.aggregate(
+        [
+          {
+            $match: {
+              status: true,
+            },
           },
-        },
-        {
-          $sort: {
-            importe: -1,
-            _id: 1,
+          {
+            $sort: {
+              importe: -1,
+              _id: 1,
+            },
           },
-        },
-      ], {maxTimeMS:50000});
+          {
+            $limit: 10,
+          },
+          {
+            $group: {
+              _id: {
+                code: "$code",
+                title: "$title",
+                category: "$category",
+                price: "$price",
+                stock: "$stock",
+              },
+              count: { $sum: 1 },
+            },
+          },
+          {
+            $project: {
+              _id: 0,
+              code: "$_id",
+              _id: "$title",
+              _id_: "$category",
+              _id: "$price",
+              _id: "$stock",
+              count: 1,
+            },
+          },
+        ],
+        { maxTimeMS: 50000 }
+      );
       return response;
     } catch (error) {
-      logger.warning (error, "something unexpected happened: " + error.message);
+      logger.warning(error, "something unexpected happened: " + error.message);
     }
   }
 
@@ -29,7 +58,7 @@ export default class ProdDaoMDB {
       const response = await ProductModel.findById(pid);
       return response;
     } catch (error) {
-      logger.warning ( "something unexpected happened: " + error.message);
+      logger.warning("something unexpected happened: " + error.message);
     }
   }
 

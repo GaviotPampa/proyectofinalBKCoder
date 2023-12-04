@@ -5,6 +5,71 @@ const httpResponse = new HttpResponse();
 import { sendMail } from "./gmail.controllers.js";
 const userDao = new UserDao();
 
+
+
+export const getAll = async (req, res, next) => {
+  try {
+    const items = await this.service.getAll();
+    createResponse(res, 200, items);
+  } catch (error) {
+    next(error.message);
+  }
+};
+
+export const getById = async (req, res, next) => {
+  try {
+    const { id } = req.params;
+    const item = await this.service.getById(id);
+    if (!item)
+      createResponse(res, 404, {
+        method: "service",
+        error: "Item not found",
+      });
+    else createResponse(res, 200, item);
+  } catch (error) {
+    next(error.message);
+  }
+};
+
+
+export const update = async (req, res, next) => {
+  try {
+    const { id } = req.params;
+    const item = await this.service.getById(id);
+    if (!item)
+      createResponse(res, 404, {
+        method: "service",
+        error: "Item not found",
+      });
+    else {
+      const itemUpd = await this.service.update(id, req.body);
+      createResponse(res, 200, itemUpd);
+    }
+  } catch (error) {
+    next(error.message);
+  }
+};
+
+export const eliminate = async (req, res, next) => {
+  try {
+    const { id } = req.params;
+    const item = await this.service.getById(id);
+    if (!item)
+      createResponse(res, 404, {
+        method: "service",
+        error: "Item not found",
+      });
+    else {
+      const itemDel = await this.service.delete(id);
+      createResponse(res, 200, itemDel);
+    }
+  } catch (error) {
+    next(error.message);
+  }
+};
+
+
+
 /* CUANDO SE REGISTRE EL USUSARIO SE HACE ENVIO DE MAIL */
 export const register = async (req, res) => {
   try {

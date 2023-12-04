@@ -13,6 +13,9 @@ import * as controller from "../controllers/views.controllers.js";
 } from "../controllers/views.controllers.js"; */
 
 router
+  .get("/home", (req, res) => {
+    res.render("home");
+  })
   .get("/login", (req, res) => {
     res.render(login);
   })
@@ -22,9 +25,9 @@ router
   /*  .get('/login', controller.login)
   .get('/register',controller.register)
   .get('/profile', controller.profile) */
-  /*  .get("/profile", (req, res) => {
+   .get("/profile", (req, res) => {
     res.render(profile);
-  }) */
+  })
   .get("/error-login", controller.errorLogin)
   /*  .get("/error-register", controller.errorRegister) */
   .get("/error-register", (req, res) => {
@@ -35,7 +38,7 @@ router
   })
   /*  .get("/products", controller.products) */
   /* router.get("/:id", cartId); */
-  .get("/", (req, res) => {
+  .get("/products", (req, res) => {
     res.render("products", { products });
   })
   .get("/realtimeproducts", (req, res) => {

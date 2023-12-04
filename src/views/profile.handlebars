@@ -2,11 +2,13 @@
   <h1 class="profile">Profile </h1>
 
   {{#if user}}
-    <h2 class="profile">Hello </h2>
-    <p class="profile"> Nombre: {{user.first_name}}</p>
-    <p class="profile">role: {{user.role}}</p>
+    {{#each user}}
+      <h2 class="profile">Hello </h2>
+      <p class="profile"> Nombre: {{this.first_name}}</p>
+      <p class="profile">role: {{this.role}}</p>
+    {{/each}}
   {{else}}
-    <h1 class="profile">Hello {{user.first_name}}</h1>
+    <h1 class="profile">Hello {{this.first_name}}</h1>
     <p class="profile">There are nothing yet.</p>
 
   {{/if}}

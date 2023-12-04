@@ -45,3 +45,51 @@ paths:
      description: Delete a product in the cart
     "500": 
      description: Error al eliminar product
+ /api/carts/:cid:
+  put:
+   tags: 
+     - Cart
+   summary: Get all cart.
+   responses:	
+    "200":
+      description: Los productos fueron obtenidos satisfactoriamente del carrito
+      content: 
+       application/json:
+        schema:
+         type: array
+         items:
+          $ref: '#/components/schemas/Cart'
+    "500": 
+      description: Error del servidor
+ /api/carts/:cid/products/:pid:
+  get:
+   tags: 
+     - Cart
+   summary: Get all cart.
+   responses:	
+    "200":
+      description: Los productos fueron obtenidos satisfactoriamente del carrito
+      content: 
+       application/json:
+        schema:
+         type: array
+         items:
+          $ref: '#/components/schemas/Cart'
+    "500": 
+      description: Error del servidor
+  /api/cart/:cid/products/:pid:
+   put:
+    tags: 
+      - Cart
+    summary: Put product in cart.
+    responses:	
+     "200":
+      description: Actualización de un producto satisfactoriamente del carrito
+      content: 
+       application/json:
+        schema:
+         type: array
+         items:
+          $ref: '#/components/schemas/Cart'
+    "500": 
+      description: Error del servidor

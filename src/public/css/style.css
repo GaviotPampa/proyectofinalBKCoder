@@ -221,3 +221,7 @@
     color: rgba(0, 0, 255, 0.457) !important;
   }
   
+  .home h1 {
+    font-size: 20px;
+    margin: 20px auto;
+  }

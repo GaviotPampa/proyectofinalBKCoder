@@ -8,12 +8,16 @@ import * as controller from "../controllers/user.controllers.js";
 const router = Router();
 
 router
+  .get("/", controller.getAll)
+  .get("/:id", controller.getById)
+  .put("/:id", controller.update)
+  .delete("/:id", controller.eliminate)
   .post("/register", controller.register)
   .post("/login", controller.login)
   .get("/login", controller.login)
   .get("/register", controller.register)
-  .get('/reset-pass', controller.resetPass)
-  .post('/reset-pass',controller.resetPass)
+  .get("/reset-pass", controller.resetPass)
+  .post("/reset-pass", controller.resetPass);
 
 router
   .get("/", (req, res) => {
@@ -47,10 +51,10 @@ router
       if (err) return res.send(err);
       else res.redirect("/login");
     }); */
-  .get("/logout", controller.logout)
+  .get("/logout", controller.logout);
 
-  /*ruta en el router de api/users, la cual será /api/users/premium/:uid  la cual permitirá cambiar el rol de un usuario, de “user” a “premium” y viceversa.
-   */
+/*ruta en el router de api/users, la cual será /api/users/premium/:uid  la cual permitirá cambiar el rol de un usuario, de “user” a “premium” y viceversa.
+ */
 /*   .get("/premium/:uid", checkUserRole, (req, res) => {}); */
 
 /* }); */

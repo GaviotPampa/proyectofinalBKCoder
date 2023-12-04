@@ -1,0 +1,7 @@
+# CoderHouse API Project
+a API with Javascript and related technologies (ES6+, mongodb, etc)
+
+# Environment variables
+
+- PORT, the default port is 8080
+- MONGO_ATLAS_URL

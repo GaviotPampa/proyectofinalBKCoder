@@ -60,3 +60,24 @@
 [2023-11-28 19:39:25] error undefined
 [2023-11-28 19:47:05] error undefined
 [2023-11-28 22:59:16] error 🚫Cannot connect to database dbConnectionMongooseError: The `uri` parameter to `openUri()` must be a string, got "undefined". Make sure the first parameter to `mongoose.connect()` or `mongoose.createConnection()` is a string.
+[2023-12-03 23:38:21] error E11000 duplicate key error collection: ecommerce.products index: code_1 dup key: { code: null }
+[2023-12-03 23:39:41] error E11000 duplicate key error collection: ecommerce.products index: code_1 dup key: { code: null }
+[2023-12-03 23:40:25] error E11000 duplicate key error collection: ecommerce.products index: code_1 dup key: { code: null }
+[2023-12-03 23:46:11] error E11000 duplicate key error collection: ecommerce.products index: code_1 dup key: { code: null }
+[2023-12-03 23:47:35] error E11000 duplicate key error collection: ecommerce.products index: code_1 dup key: { code: null }
+[2023-12-04 00:03:53] error E11000 duplicate key error collection: ecommerce.products index: code_1 dup key: { code: null }
+[2023-12-04 00:04:38] error E11000 duplicate key error collection: ecommerce.products index: code_1 dup key: { code: null }
+[2023-12-04 00:05:55] error E11000 duplicate key error collection: ecommerce.products index: code_1 dup key: { code: null }
+[2023-12-04 00:10:32] error E11000 duplicate key error collection: ecommerce.products index: code_1 dup key: { code: null }
+[2023-12-04 00:12:36] error E11000 duplicate key error collection: ecommerce.products index: code_1 dup key: { code: null }
+[2023-12-04 00:13:07] error E11000 duplicate key error collection: ecommerce.products index: code_1 dup key: { code: null }
+[2023-12-04 00:15:23] error E11000 duplicate key error collection: ecommerce.products index: code_1 dup key: { code: null }
+[2023-12-04 00:18:24] error E11000 duplicate key error collection: ecommerce.products index: code_1 dup key: { code: null }
+[2023-12-04 00:18:37] error E11000 duplicate key error collection: ecommerce.products index: code_1 dup key: { code: null }
+[2023-12-04 00:23:31] error E11000 duplicate key error collection: ecommerce.products index: code_1 dup key: { code: null }
+[2023-12-04 00:26:59] error E11000 duplicate key error collection: ecommerce.products index: code_1 dup key: { code: null }
+[2023-12-04 00:28:26] error E11000 duplicate key error collection: ecommerce.products index: code_1 dup key: { code: null }
+[2023-12-04 00:30:33] error E11000 duplicate key error collection: ecommerce.products index: code_1 dup key: { code: null }
+[2023-12-04 00:31:41] error E11000 duplicate key error collection: ecommerce.products index: code_1 dup key: { code: null }
+[2023-12-04 00:35:07] error E11000 duplicate key error collection: ecommerce.products index: code_1 dup key: { code: null }
+[2023-12-04 00:35:17] error E11000 duplicate key error collection: ecommerce.products index: code_1 dup key: { code: null }

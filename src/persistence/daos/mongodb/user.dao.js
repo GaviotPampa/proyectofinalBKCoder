@@ -5,6 +5,35 @@ import jwt from 'jsonwebtoken';
 import logger from "../../../middlewares/logger-mw.js";
 
 export default class UserDao {
+
+  
+  async getAll() {
+    try {
+      const response = await this.find({});
+      return response;
+    } catch (error) {
+      logger.error(error);
+    }
+  }
+
+
+  async update(id, obj) {
+    try {
+      await this.updateOne({ _id: id }, obj);
+      return obj;
+    } catch (error) {
+      logger.error(error);
+    }
+  }
+
+  async eliminate(id) {
+    try {
+      const response = await this.findByIdAndDelete(id);
+      return response;
+    } catch (error) {
+      logger.error(error);
+    }
+  }
   async register(user) {
     try {
       const { email, password } = user;

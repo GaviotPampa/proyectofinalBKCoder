@@ -5,6 +5,45 @@ import logger from "../middlewares/logger-mw.js";
 import { getByIdDTO } from "../persistence/repositories/user/user.repository.js";
 import { sendMail } from "../controllers/gmail.controllers.js";
 
+export const getAll = async () => {
+  try {
+    const items = await userDao.getAll();
+    return items;
+  } catch (error) {
+    logger.error(error);
+  }
+};
+
+export const getById = async (id) => {
+  try {
+    const item = await userDao.getById(id);
+    if (!item) return false;
+    else return item;
+  } catch (error) {
+    logger.error(error);
+  }
+};
+
+export const update = async (id, obj) => {
+  try {
+    const item = await userDao.getById(id);
+    if (!item) return false;
+    else return await userDao.update(id, obj);
+  } catch (error) {
+    logger.error(error);
+  }
+};
+
+export const eliminate = async (id) => {
+  try {
+    const item = await userDao.getById(id);
+    if (!item) return false;
+    else return await userDao.eliminate(id);
+  } catch (error) {
+    logger.error(error);
+  }
+};
+
 export const register = async (req, res, next) => {
   logger.error("error register user.service", register);
   try {
@@ -86,12 +125,12 @@ export const getByIdDTO = async (id) => {
   }
 };
 
-export const resetPass  = async(user) => {
+export const resetPass = async (user) => {
   try {
     const token = await userDao.resetPass(user);
     if (!token) return false;
-    return await sendMail(user,'resetPass', token);
+    return await sendMail(user, "resetPass", token);
   } catch (error) {
     logger.error(error);
   }
-}
+};

@@ -1,7 +1,9 @@
 import { Router } from "express";
 const router = Router();
 
-router.get('/home'), (req, res) =>  {
-    res.render('home',{});
+router.get('/'), (req, res) =>  {
+    res.render('home',{
+        title: "Api Backend",
+    });
 }
 export default router
