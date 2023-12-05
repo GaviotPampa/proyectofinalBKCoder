@@ -6,16 +6,13 @@ No es necesario implementarlo en ambos lados, salvo que sea sumamente necesario.
  */
 
 export default class UseResDto {
-    constructor(user) {
-      user.first_name;
-  
-      user.last_name;
-  
-      user.email;
-  
-      user.age;
-  
-      user.role;
-    }
+  constructor(user) {
+    this.user = user.first_name;
+
+    this.user = user.last_name;
+
+    this.user = user.email;
+
+    this.user = user.role;
   }
-  
+}

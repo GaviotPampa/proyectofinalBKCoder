@@ -6,6 +6,6 @@ const http = new HttpResponse();
 export const errorHandler = (error, req, res, next) => {
     logger.debug(error.stack);
     const status = error.statusCode || 500
-    return http.ServerError(res, error.message, status)
+    return http.ServerError(res, error.message, status);
 
 }

@@ -154,3 +154,41 @@ export const resetPass = async (req, res, next) => {
     next(error.message);
   }
 };
+
+export const uploadDocuments = async (req, res, next) => {
+  try {
+    /* res.send ({data:" Enviar un document"}); */
+    const uid = req.params.uid;
+    const user = await service.getAll(uid);
+    if (!user) {
+      return httpResponse.NotFound(res, 404, "NOT_FOUND");
+    }
+    const files = req.files;
+    if (!files.profile || !files.product || !files.document) {
+      return res.status(404).send({
+        status: "error",
+        error: "Please upload all required documents",
+      });
+    }
+    console.log(req.files);
+    user.documents = {
+      profile: files.profile[0].filename,
+      product: files.product[0].filename,
+      document: files.document.map((file) => file.filename),
+    };
+    if (
+      user.documents.profile &&
+      user.documents.product &&
+      user.documents.document.length === 3
+    ) {
+      user.status = "premium";
+      user.profile = req.files.path;
+      user.push(user);
+      await user.save();
+    }
+    res.send({ status: "succes", message: "Documents uploaded successfully" });
+  } catch (error) {
+    logger.error("uploadDocuments failed user.controller".error);
+    next(error.message);
+  }
+};

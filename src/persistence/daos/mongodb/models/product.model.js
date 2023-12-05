@@ -41,6 +41,7 @@ const ProductSchema = new Schema({
   thumbnails: [
     {
       type: String,
+      default: [],
     },
   ],
   inCart: {

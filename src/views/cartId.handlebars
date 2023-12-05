@@ -1,12 +1,23 @@
-{{!-- vista para visualizar un carrito especifico --}}
+{{! vista para visualizar un carrito especifico }}
 <div>
   <h3> Tu Carrito de compras</h3>
 </div>
 
 <div>
-  <p id="carts"></p>
+  <p id="carts">Productos agregados</p>
+  <ul>
+    {{#each products}}
+      <li>
+        ID del producto:
+        {{this.product}}
+        - Cantidad:
+        {{this.quantity}}
+      </li>
+    {{/each}}
+  </ul>
 </div>
-
+<button class="button" onclick="location.href='/api/sessions/login'">Terminar
+  Compra</button>
 <script src="/socket.io/socket.io.js"></script>
 
 <script src="js/index.js" charset="utf-8"></script>

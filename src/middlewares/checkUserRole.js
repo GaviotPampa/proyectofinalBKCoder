@@ -10,7 +10,7 @@ export const checkUserRole= async (req, res, next) => {
     const user = await userDao.getById(user._id);
     if (!user) return res.status(400).json({ msg: "Usuario no encontrado: No tienes permiso para acceder, Unauthorized!" });
     const userRole = user.role;
-    logger.info("error en chekRole ",userRole);
+    logger.info("info chekRole ",userRole);
     if(userRole !== 'admin') return res.status(403).json({ msg: 'No user admin'});
     else next();
     if(userRole === 'user') return res.status(200).json({ msg: 'User acces authenticated'});

@@ -10,6 +10,7 @@ const TicketSchema = new mongoose.Schema(
     purchase_datatime: {
       type: Date,
       required: true,
+      default: Date.now(),
     },
     amount: {
       type: Number,
