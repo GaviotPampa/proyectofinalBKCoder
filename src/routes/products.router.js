@@ -7,13 +7,9 @@ import * as controller from "../controllers/product.controllers.js";
 router
   .get("/", controller.getAllProd)
 
-  .post("/" /* , checkRole */, controller.createProdDTO)
-
   .get("/:pid", controller.getById)
 
   .get("/prodDto/:pid", controller.getByIdDto)
-
-  .put("/:pid", checkUserRole, controller.update)
 
   /* Sólo el usuario puede agregar productos a su carrito. */
 
@@ -23,6 +19,9 @@ router
     controller.addProdToCart
   )
   /* Sólo el administrador puede crear, actualizar y eliminar productos */
+  .post("/", /* checkUserRole,  */controller.createProdDTO)
+  .put("/:pid", /* checkUserRole, */ controller.update)
+
   .delete("/:id", checkUserRole, controller.expunge)
 
   .get("/paginate", controller.getPaginate);

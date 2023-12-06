@@ -159,7 +159,7 @@ export const uploadDocuments = async (req, res, next) => {
   try {
     /* res.send ({data:" Enviar un document"}); */
     const uid = req.params.uid;
-    const user = await service.getAll(uid);
+    const user = await service.upload({_id: uid});
     if (!user) {
       return httpResponse.NotFound(res, 404, "NOT_FOUND");
     }
@@ -183,7 +183,7 @@ export const uploadDocuments = async (req, res, next) => {
     ) {
       user.status = "premium";
       user.profile = req.files.path;
-      user.push(user);
+      user.document.push(user);
       await user.save();
     }
     res.send({ status: "succes", message: "Documents uploaded successfully" });

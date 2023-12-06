@@ -87,3 +87,20 @@ export const removeItem = async (req, res, next) => {
       next(error.message);
     }
   };
+
+  export const compararStock = async (req,res,next)=> {
+    try {
+      const {cartId, quantity} = req.params;
+      for (let i = 0; i < cartId.length; i++) {
+        const item = cartId[i];
+        const stock = quantity[item.id].stock;
+        if (item.quantity > stock) {
+          return false;
+        }
+      }
+      return true;
+    } catch (error) {
+      logger.error(error);
+    }
+    
+  }

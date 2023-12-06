@@ -41,21 +41,22 @@ export const mongoStoreOptions = {
 
 const storage = multer.diskStorage({
   destination: function (req, file, cb) {
-    let uploads = '';
-    if (file.fieldname === 'profile') {
-      uploads = 'profiles';
-    }else if (file.fieldname === 'product'){
-      uploads = 'products';
-    }else if (file.fieldname === 'document'){
-      uploads = 'documents';
+    if (file.fieldname === "profile") {
+      cb(null,  __dirname + "/public/uploads/profiles/");
+    } else if (file.fieldname === "product") {
+      cb(null,  __dirname + "/public/uploads/products/");
+    } else {
+      file.fieldname === "document";
+      cb(null, __dirname + "/public/uploads/documents");
     }
-    cb(null, __dirname + "/public/uploads");
-  },
-  filename: function (req, file, cb) {
-    cb(null,file.originalname + '-' + Date.now())
+/*     cb(null, __dirname + "/public/uploads");
+ */  },
+  filename:  (req, file, cb) =>{
+    const fileExtension = path.extname(file.originalname);
+    const fileName = file.originalname.split(fileExtension)[0];
+    cb(null, `${fileName} + "." + ${Date.now()}${fileExtension}`);
     console.log(filename);
-
-  }
+  },
 });
 
-export const uploader = multer({storage: storage});
+export const uploader = multer({ storage: storage });

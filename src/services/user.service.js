@@ -8,7 +8,7 @@ import { sendMail } from "../controllers/gmail.controllers.js";
 export const getAll = async () => {
   try {
     const items = await userDao.getAll();
-    logger.info ("getAll user.service",items)
+    logger.info("getAll user.service", items);
     return items;
   } catch (error) {
     logger.error(error, "error getting all user.service");
@@ -131,6 +131,16 @@ export const resetPass = async (user) => {
     const token = await userDao.resetPass(user);
     if (!token) return false;
     return await sendMail(user, "resetPass", token);
+  } catch (error) {
+    logger.error(error);
+  }
+};
+
+export const upload = async (id) => {
+  try {
+    const item = await userDao.getById(id);
+    if (!item) return false;
+    else return item;
   } catch (error) {
     logger.error(error);
   }

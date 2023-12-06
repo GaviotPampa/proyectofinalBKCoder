@@ -115,3 +115,10 @@
 [2023-12-04 08:05:56] error error en getById user.controller createResponse is not defined
 [2023-12-04 18:42:32] error en el register en user.controllers
 [2023-12-05 00:14:38] error 🚫Cannot connect to database dbConnectionMongooseError: The `uri` parameter to `openUri()` must be a string, got "undefined". Make sure the first parameter to `mongoose.connect()` or `mongoose.createConnection()` is a string.
+[2023-12-05 19:18:01] error Cast to ObjectId failed for value "{ _id: 'profile' }" (type Object) at path "_id" for model "users"
+[2023-12-05 19:18:01] error CastError: Cast to ObjectId failed for value "{ _id: 'profile' }" (type Object) at path "_id" for model "users"
+[2023-12-05 19:18:14] error Cast to ObjectId failed for value "{ _id: 'profile' }" (type Object) at path "_id" for model "users"
+[2023-12-05 19:18:14] error CastError: Cast to ObjectId failed for value "{ _id: 'profile' }" (type Object) at path "_id" for model "users"
+[2023-12-05 22:36:31] error E11000 duplicate key error collection: ecommerce.products index: code_1 dup key: { code: null }
+[2023-12-05 22:37:49] error E11000 duplicate key error collection: ecommerce.products index: code_1 dup key: { code: null }
+[2023-12-05 22:40:26] error E11000 duplicate key error collection: ecommerce.products index: code_1 dup key: { code: null }
