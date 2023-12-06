@@ -22,7 +22,7 @@ export const sendGmail = async (req, res, next) => {
 };
 
 /* funcion reutilizable para registro y restablecimiento de contraseña */
-/* en el registro no se utiliza el tojen */
+/* en el registro no se utiliza el token */
 
 const createMsgRegister = (first_name) => {
   return `<h1>Hola ${first_name}, ¡Bienvenido! </h1>`;
@@ -43,25 +43,26 @@ export const sendMail = async (user, service, token = null) => {
       ? (msg = createMsgRegister(first_name))
       : service === "resetPass"
       ? (msg = createMsgReset(first_name))
-      : (msg = "contenido deñ correo electrónico");
+      : (msg = "contenido del correo electrónico");
 
-      let subj = '';
-      subj = service === "register"
-      ? `Bienvenido:  ${first_name} `
-      : service === "resetPass"
-      ? 'Restablecimiento de contraseña'
-      : '';
+    let subj = "";
+    subj =
+      service === "register"
+        ? `Bienvenido:  ${first_name} `
+        : service === "resetPass"
+        ? "Restablecimiento de contraseña"
+        : "";
 
-      const gmailOptions= {
-        from: config.EMAIL_GMAIL,
-        to: email,
-        subject: subj,
-        html: msg
-      };
+    const gmailOptions = {
+      from: config.EMAIL_GMAIL,
+      to: email,
+      subject: subj,
+      html: msg,
+    };
 
-      const response = await transporter.sendMail( gmailOptions);
-      if (token !== null) return token;
-      console.log('Email sent'+ response);
+    const response = await transporter.sendMail(gmailOptions);
+    if (token !== null) return token;
+    console.log("Email sent" + response);
   } catch (error) {
     throw new Error(error.message);
   }

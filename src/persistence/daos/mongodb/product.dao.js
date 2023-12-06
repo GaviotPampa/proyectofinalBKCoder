@@ -62,6 +62,15 @@ export default class ProdDaoMDB {
     }
   }
 
+  async getByIdDto(pid) {
+    try {
+      const response = await ProductModel.findById(pid);
+      return response;
+    } catch (error) {
+      logger.warning("something unexpected happened: " + error.message);
+    }
+  }
+
   async create(obj) {
     try {
       const response = await ProductModel.create(obj);

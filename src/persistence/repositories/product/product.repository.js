@@ -11,9 +11,10 @@ const prodDao = new ProdDaoMDB();
 
   export const  getByIdDto = async(id)=> {
     try {
-      /* const resDTO = new ProdResDto(id);
-      return await prodDao.getById(resDTO); */
-      const prod = await prodDao.getById(id);
+      /* const prodDTO =  await prodDao.getById(id); 
+         const resDto = new ProdResDto(prodDTO);
+      return*/
+      const prod = await prodDao.getByIdDto(id);
       return new ProdResDto (prod);
 
     } catch (error) {

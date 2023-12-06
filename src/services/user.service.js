@@ -133,6 +133,7 @@ export const resetPass = async (user) => {
     return await sendMail(user, "resetPass", token);
   } catch (error) {
     logger.error(error);
+    throw new Error(error.message);
   }
 };
 

@@ -122,3 +122,74 @@
 [2023-12-05 22:36:31] error E11000 duplicate key error collection: ecommerce.products index: code_1 dup key: { code: null }
 [2023-12-05 22:37:49] error E11000 duplicate key error collection: ecommerce.products index: code_1 dup key: { code: null }
 [2023-12-05 22:40:26] error E11000 duplicate key error collection: ecommerce.products index: code_1 dup key: { code: null }
+[2023-12-05 23:28:20] error Error en la busqueda de producto por ID
+[2023-12-05 23:28:27] error Error en la busqueda de producto por ID
+[2023-12-05 23:29:34] error Error en la busqueda de producto por ID en product.controller. 
+[2023-12-05 23:30:09] error Error en la busqueda de producto por ID en product.controller. 
+[2023-12-05 23:30:22] error Error en la busqueda de producto por ID en product.controller. 
+[2023-12-05 23:31:00] error Error en la busqueda de producto por ID en product.controller. 
+[2023-12-05 23:32:44] error Error en la busqueda de producto por ID en product.controller. 
+[2023-12-05 23:35:14] error Error en la busqueda de producto por ID en product.controller. 
+[2023-12-05 23:35:43] error Error en la busqueda de producto por ID en product.controller. 
+[2023-12-05 23:37:44] error Error en la busqueda de producto por ID en product.controller. 
+[2023-12-05 23:39:56] error Error en la busqueda de producto por ID en product.controller. 
+[2023-12-05 23:39:59] error Error en la busqueda de producto por ID en product.controller. 
+[2023-12-05 23:42:57] error Error en la busqueda de producto por ID en product.controller. 
+[2023-12-05 23:42:58] error Error en la busqueda de producto por ID en product.controller. 
+[2023-12-05 23:42:59] error Error en la busqueda de producto por ID en product.controller. 
+[2023-12-05 23:43:05] error Error en la busqueda de producto por ID en product.controller. 
+[2023-12-05 23:43:32] error Error en la busqueda de producto por ID en product.controller. 
+[2023-12-06 06:50:28] error Error en la busqueda de producto por ID en product.controller. 
+[2023-12-06 06:51:09] error Error en la busqueda de producto por ID en product.controller. 
+[2023-12-06 06:52:37] error Error en la busqueda de producto por ID en product.controller. 
+[2023-12-06 06:53:16] error Error en la busqueda de producto por ID en product.controller. 
+[2023-12-06 06:54:20] error Error en la busqueda de producto por ID en product.controller. 
+[2023-12-06 06:55:02] error Error en la busqueda de producto por ID en product.controller. 
+[2023-12-06 07:30:43] error Error en la busqueda de producto por ID en product.controller. 
+[2023-12-06 07:30:43] error Error en la busqueda de producto por ID en product.controller. 
+[2023-12-06 07:30:47] error Error en la busqueda de producto por ID en product.controller. 
+[2023-12-06 07:39:11] error Error en la busqueda de producto por ID en product.controller. 
+[2023-12-06 07:39:15] error Error en la busqueda de producto por ID en product.controller. 
+[2023-12-06 08:08:42] error en el register en user.controllers
+[2023-12-06 08:40:06] error TypeError: Cannot destructure property 'email' of 'user' as it is undefined.
+[2023-12-06 16:29:47] error TypeError: Cannot destructure property 'email' of 'user' as it is undefined.
+[2023-12-06 16:32:40] error TypeError: Cannot destructure property 'email' of 'user' as it is undefined.
+[2023-12-06 16:35:25] error TypeError: Cannot destructure property 'email' of 'user' as it is undefined.
+[2023-12-06 16:36:00] error TypeError: Cannot destructure property 'email' of 'user' as it is undefined.
+[2023-12-06 16:36:24] error TypeError: Cannot destructure property 'email' of 'user' as it is undefined.
+[2023-12-06 16:38:00] error TypeError: Cannot destructure property 'email' of 'user' as it is undefined.
+[2023-12-06 16:38:00] error undefined
+[2023-12-06 17:03:03] error ReferenceError: req is not defined
+[2023-12-06 17:03:03] error undefined
+[2023-12-06 17:04:51] error TypeError: UserModel.getByEmail is not a function
+[2023-12-06 17:04:51] error undefined
+[2023-12-06 17:06:53] error TypeError: Cannot destructure property 'email' of 'user' as it is undefined.
+[2023-12-06 17:06:53] error undefined
+[2023-12-06 17:06:54] error TypeError: Cannot destructure property 'email' of 'user' as it is undefined.
+[2023-12-06 17:06:54] error undefined
+[2023-12-06 17:06:55] error TypeError: Cannot destructure property 'email' of 'user' as it is undefined.
+[2023-12-06 17:06:55] error undefined
+[2023-12-06 17:10:27] error TypeError: Cannot destructure property 'email' of 'user' as it is undefined.
+[2023-12-06 17:10:27] error undefined
+[2023-12-06 17:10:28] error TypeError: Cannot destructure property 'email' of 'user' as it is undefined.
+[2023-12-06 17:10:28] error undefined
+[2023-12-06 17:10:29] error TypeError: Cannot destructure property 'email' of 'user' as it is undefined.
+[2023-12-06 17:10:29] error undefined
+[2023-12-06 17:10:30] error TypeError: Cannot destructure property 'email' of 'user' as it is undefined.
+[2023-12-06 17:10:30] error undefined
+[2023-12-06 17:10:30] error TypeError: Cannot destructure property 'email' of 'user' as it is undefined.
+[2023-12-06 17:10:30] error undefined
+[2023-12-06 17:12:02] error TypeError: Cannot destructure property 'email' of 'user' as it is undefined.
+[2023-12-06 17:12:02] error undefined
+[2023-12-06 17:13:04] error TypeError: Cannot destructure property 'email' of 'user' as it is undefined.
+[2023-12-06 17:13:04] error undefined
+[2023-12-06 17:20:35] error TypeError: Cannot destructure property 'email' of 'user' as it is undefined.
+[2023-12-06 17:20:35] error undefined
+[2023-12-06 17:21:08] error TypeError: Cannot destructure property 'email' of 'user' as it is undefined.
+[2023-12-06 17:21:08] error undefined
+[2023-12-06 17:22:06] error TypeError: Cannot destructure property 'email' of 'user' as it is undefined.
+[2023-12-06 17:22:06] error undefined
+[2023-12-06 17:22:43] error TypeError: Cannot destructure property 'email' of 'user' as it is undefined.
+[2023-12-06 17:22:43] error undefined
+[2023-12-06 17:25:37] error TypeError: Cannot destructure property 'email' of 'user' as it is undefined.
+[2023-12-06 17:25:37] error undefined

@@ -68,7 +68,7 @@ export default class UserDao {
         const passValid = isValidPassword(password, userExist);
         console.log("PASSValid in login user.dao:", passValid);
         if (!passValid) return false;
-        else return userExist;
+        else return this.generateToken (userExist, '15m');
       }
       return false;
     } catch (error) {
@@ -92,14 +92,14 @@ export default class UserDao {
 
   async getByEmail(email) {
     try {
-      const userExist = await UserModel.findOne({ email });
+      const userExist = await UserModel.findOne({ email});
       console.log(userExist);
       if (userExist) {
         return userExist;
       }
       return false;
     } catch (error) {
-      throw new Error(error);
+      throw new Error(error.message);
     }
   }
 
@@ -115,7 +115,12 @@ export default class UserDao {
       throw new Error(error);
     }
   }
-
+/**
+ * Genera el Token del usuario
+ * @param {*} user 
+ * @param {*} timeExp tiempo de expiración
+ * @returns token
+ */
   async generateToken(user, timeExp) {
     const payload = {
       userId: user._id,
@@ -129,7 +134,7 @@ export default class UserDao {
   async resetPass(user) {
     try {
       const { email } = user;
-      const userExist = await UserModel.getByEmail(email);
+      const userExist = await this.getByEmail(email);
       if (!userExist) return false;
       return generateToken(userExist, "1h");
     } catch (error) {

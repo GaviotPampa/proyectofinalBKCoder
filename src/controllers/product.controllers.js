@@ -46,16 +46,17 @@ export const getById = async (req, res, next) => {
 
 export const getByIdDto= async (req, res, next) => {
   try {
-    const productId = req.params.pid;
-    const product = await service.getByIdDto(productId);
+    const prodId = req.params.pid;
+    const product = await service.getByIdDto(prodId);
+    console.log(product)
     if (!product)
       return httpResponse.NotFound(
         res,
-        "Product not found by pid " + productId
+        "Product not found by pid " + id
       );
     else httpResponse.Ok(res, product);
   } catch (error) {
-    logger.error("Error en la busqueda de producto por ID");
+    logger.error("Error en la busqueda de producto por ID en product.controller. " );
     next(error.message);
   }
 };

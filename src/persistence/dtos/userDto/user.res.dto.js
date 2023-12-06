@@ -5,14 +5,14 @@
 No es necesario implementarlo en ambos lados, salvo que sea sumamente necesario.
  */
 
-export default class UseResDto {
+export default class UserResDto {
   constructor(user) {
-    this.user = user.first_name;
+    this.nombre = user.first_name;
 
-    this.user = user.last_name;
+    this.apellido = user.last_name;
 
-    this.user = user.email;
+    this.correo = user.email;
 
-    this.user = user.role;
+    this.rol = user.role;
   }
 }

@@ -29,7 +29,7 @@ export const getById = async (id) => {
 
 export const getByIdDto = async (id) => {
   try {
-    const item = await prodDao.getById(id);
+    const item = await prodDao.getByIdDto(id);
     if (!item) return false;
     else return item;
   } catch (error) {

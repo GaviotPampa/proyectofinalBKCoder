@@ -88,7 +88,8 @@ export const login = async (req, res, next) => {
     if (user) {
       req.session.email = email;
       req.session.password = password;
-      res.redirect("/api/sessions/profile");
+      return httpResponse.Ok(res, user);
+      /*  res.redirect("/api/sessions/profile"); */
     } else res.redirect("/api/sessions/error-login");
     logger.info("login user.controller ok", user);
   } catch (error) {
@@ -144,11 +145,11 @@ export const logout = async (req, res, next) => {
 export const resetPass = async (req, res, next) => {
   try {
     const user = req.user;
-    const tokenResetPass = await userService.resetPass(user);
+    const tokenResetPass = await service.resetPass(user);
     if (!tokenResetPass)
       return httpResponse.Unauthorized(res, "Error email reset notification");
     res.cookie("tokenPass", tokenResetPass);
-    return httpResponse.Ok(res, { msg: "Pass reset successfully" });
+    return httpResponse.Ok(res, { msg: "Email reset pass sent successfully" });
   } catch (error) {
     logger.error("resetPass failed user.controller".error);
     next(error.message);
@@ -159,7 +160,7 @@ export const uploadDocuments = async (req, res, next) => {
   try {
     /* res.send ({data:" Enviar un document"}); */
     const uid = req.params.uid;
-    const user = await service.upload({_id: uid});
+    const user = await service.upload({ _id: uid });
     if (!user) {
       return httpResponse.NotFound(res, 404, "NOT_FOUND");
     }

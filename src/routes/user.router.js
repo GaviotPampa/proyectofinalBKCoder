@@ -18,7 +18,7 @@ router
   .get("/login", controller.login)
   .get("/register", controller.register)
   .get("/reset-pass", controller.resetPass)
-  .post("/reset-pass", controller.resetPass);
+  .post("/reset-pass", /* checkAuth, */ controller.resetPass);
 
 router
   .get("/", (req, res) => {
