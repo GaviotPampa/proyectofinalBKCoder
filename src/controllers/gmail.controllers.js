@@ -25,12 +25,17 @@ export const sendGmail = async (req, res, next) => {
 /* en el registro no se utiliza el token */
 
 const createMsgRegister = (first_name) => {
-  return `<h1>Hola ${first_name}, ¡Bienvenido! </h1>`;
+  return `<h1>Hola 🎄 ${first_name}, ¡Bienvenido! </h1>
+  <br>
+ <p style=" font-size: 18px;"> Puedes ingresar aquí para loguearte</p>
+ <a href="http://localhost:8080/api/sessions/login"><strong style="color: green; font-size: 18px;">Login</strong></a>`;
 };
 
 const createMsgReset = (first_name) => {
-  return `<h1>Hola ${first_name} </h1>. Recibiste este correo porque solicitaste recuperar la contraseña de tu cuenta.
-  Tocá el siguiente botón <a href="http://localhost:8080/api/userRestart">Restablecer contraseña</a> para crear una nueva. Si no lo pediste, podés ignorar este mensaje.
+  return `<h1>Hola ${first_name} 👋 </h1>. <p style=" font-size: 18px;">Recibiste este correo porque solicitaste recuperar la contraseña de tu cuenta.
+  <br>
+  Tocá el siguiente botón <a href="http://localhost:8080/api/sessions/reset-pass">Restablecer contraseña</a> para crear una nueva. Si no lo pediste, podés ignorar este mensaje.
+  </p>
 
  `;
 };

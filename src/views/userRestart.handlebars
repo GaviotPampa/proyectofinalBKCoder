@@ -1,9 +1,19 @@
-<h1>Restablecimiento de contraseña</h1>
-<hr>
-<form action="/api/sessions/user-restart" method="post">
-    Email: <input type="text" name="email"> <input type="submit" value="Restablecer contraseña"><br><br> 
-</form>
-<hr>
-<button onclick="location.href='/sessions/login'">Login</button>
-<hr>
-<button onclick="location.href='/sessions/register'">Registrate</button>
+<div class="contenedor-formulario">
+  <h1>Restablecimiento de contraseña</h1>
+  <form class="form" action="/users/reset-pass" method="post">
+    <div class="contenedor-input">
+      <label> Email:</label>
+      <input type="text" name="email" />
+    </div>
+    <div class="contenedor-input">
+      <label>New Password:</label>
+      <input type="password" name="password" id="password" />
+    </div>
+  {{!--   <div>
+      <input type="submit" value="Restablecer contraseña" />
+    </div> --}}
+    <button class="button" onclick="location.href='/api/sessions/login'">Restablecer</button>
+
+  </form>
+
+</div>

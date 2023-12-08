@@ -18,8 +18,8 @@ router
   .get("/login", controller.login)
   .get("/register", controller.register)
   .get("/reset-pass", controller.resetPass)
-  .post("/reset-pass", /* checkAuth, */ controller.resetPass);
-
+  .post("/reset-pass", checkAuth, controller.resetPass)
+  .put("/update-pass", controller.updatePass);
 router
   .get("/", (req, res) => {
     const { first_name } = req.body;
@@ -58,7 +58,7 @@ router
    */
   /* sólo actualice al usuario a premium si ya ha cargado los siguientes documentos:
    */
-  /*   .get("/premium/:uid", checkUserRole, (req, res) => {}); */
+  /*   .put("/premium/:uid", checkUserRole, controller.); */
 
   /* }); */
 

@@ -193,3 +193,209 @@
 [2023-12-06 17:22:43] error undefined
 [2023-12-06 17:25:37] error TypeError: Cannot destructure property 'email' of 'user' as it is undefined.
 [2023-12-06 17:25:37] error undefined
+[2023-12-06 17:43:57] error TypeError: Cannot destructure property 'email' of 'user' as it is undefined.
+[2023-12-06 17:43:57] error undefined
+[2023-12-06 18:39:17] error error en login user.dao Parameter "filter" to findOne() must be an object, got "" (type string)
+[2023-12-06 18:39:24] error Cast to ObjectId failed for value "{ _id: 'register-github' }" (type Object) at path "_id" for model "users"
+[2023-12-06 18:39:24] error CastError: Cast to ObjectId failed for value "{ _id: 'register-github' }" (type Object) at path "_id" for model "users"
+[2023-12-06 18:39:24] error error en login user.dao Parameter "filter" to findOne() must be an object, got "" (type string)
+[2023-12-06 19:18:28] error error en login user.dao Parameter "filter" to findOne() must be an object, got "gaviclcarrizo@gmail.com" (type string)
+[2023-12-06 19:18:53] error error en login user.dao Parameter "filter" to findOne() must be an object, got "gaviclcarrizo@gmail.com" (type string)
+[2023-12-06 19:23:47] error invalid token
+[2023-12-06 19:24:21] error UserDao.getById is not a function
+[2023-12-06 19:31:30] error UserDao.getById is not a function
+[2023-12-06 19:34:46] error UserDao.getById is not a function
+[2023-12-06 19:52:27] error undefined
+[2023-12-06 19:56:56] error Cannot read properties of undefined (reading 'user')
+[2023-12-06 19:58:56] error Cannot read properties of undefined (reading 'user')
+[2023-12-06 20:01:11] error Cannot read properties of undefined (reading 'user')
+[2023-12-06 20:04:09] error UserDao.getById is not a function
+[2023-12-06 20:07:35] error UserDao.getById is not a function
+[2023-12-06 20:10:38] error UserDao.getById is not a function
+[2023-12-06 20:11:18] error UserDao.getById is not a function
+[2023-12-06 20:11:18] error UserDao.getById is not a function
+[2023-12-06 20:12:43] error UserDao.getById is not a function
+[2023-12-06 20:15:12] error UserDao.getById is not a function
+[2023-12-06 20:20:59] error UserDao.getById is not a function
+[2023-12-06 20:24:08] error error en login user.dao UserModel.getByEmail is not a function
+[2023-12-06 20:24:39] error UserDao.getById is not a function
+[2023-12-06 20:25:24] error UserDao.getById is not a function
+[2023-12-07 06:59:14] error this.updateOne is not a function
+[2023-12-07 16:29:23] error UserDao.getById is not a function
+[2023-12-07 17:49:20] error UserDao.getById is not a function
+[2023-12-07 18:09:23] error UserDao.getById is not a function
+[2023-12-07 18:11:09] error UserDao.getById is not a function
+[2023-12-07 18:12:23] error UserDao.getById is not a function
+[2023-12-07 18:14:23] error UserDao.getById is not a function
+[2023-12-07 18:29:56] error UserDao.getById is not a function
+[2023-12-07 18:34:03] error UserDao.getById is not a function
+[2023-12-07 18:35:23] error UserDao.getById is not a function
+[2023-12-07 19:51:08] error UserDao.getById is not a function
+[2023-12-07 19:51:57] error UserDao.getById is not a function
+[2023-12-07 19:54:10] error UserDao.getById is not a function
+[2023-12-07 20:08:53] error UserDao.getById is not a function
+[2023-12-07 20:13:31] error UserDao.getById is not a function
+[2023-12-07 20:29:06] error Cannot read properties of undefined (reading 'user')
+[2023-12-07 20:31:27] error Cannot read properties of undefined (reading 'user')
+[2023-12-07 20:32:22] error undefined
+[2023-12-07 20:32:54] error Cannot read properties of undefined (reading 'user')
+[2023-12-07 20:34:00] error Cannot read properties of undefined (reading 'user')
+[2023-12-07 20:38:06] error UserDao.getById is not a function
+[2023-12-07 20:38:43] error UserDao.getById is not a function
+[2023-12-07 20:38:44] error UserDao.getById is not a function
+[2023-12-07 20:56:35] error en el register en user.controllers
+[2023-12-07 21:01:09] error error register user.service
+[2023-12-07 21:01:09] error Cannot read properties of undefined (reading 'json')
+[2023-12-07 21:01:13] error en el register en user.controllers
+[2023-12-07 21:10:26] error error register user.service
+[2023-12-07 21:11:08] error error register user.service
+[2023-12-07 21:12:11] error error register user.service
+[2023-12-07 21:15:47] error error register user.service
+[2023-12-07 21:17:05] error en el register user.dao Parameter "filter" to findOne() must be an object, got "agus@mail.com" (type string)
+[2023-12-07 21:20:19] error error register user.service
+[2023-12-07 21:21:51] error Cannot read properties of undefined (reading 'user')
+[2023-12-07 21:22:34] error Cannot read properties of undefined (reading 'body')
+[2023-12-07 21:23:39] error en el register en user.controllers
+[2023-12-08 00:19:59] error getById error en userDao Cast to ObjectId failed for value "{ _id: 'register-github' }" (type Object) at path "_id" for model "users"
+[2023-12-08 00:19:59] error Cast to ObjectId failed for value "{ _id: 'register-github' }" (type Object) at path "_id" for model "users"
+[2023-12-08 00:20:25] error getById error en userDao Cast to ObjectId failed for value "{ _id: 'register-github' }" (type Object) at path "_id" for model "users"
+[2023-12-08 00:20:25] error Cast to ObjectId failed for value "{ _id: 'register-github' }" (type Object) at path "_id" for model "users"
+[2023-12-08 00:20:33] error getById error en userDao Cast to ObjectId failed for value "{ _id: 'register-github' }" (type Object) at path "_id" for model "users"
+[2023-12-08 00:20:33] error Cast to ObjectId failed for value "{ _id: 'register-github' }" (type Object) at path "_id" for model "users"
+[2023-12-08 00:20:52] error getById error en userDao Cast to ObjectId failed for value "{ _id: 'register-github' }" (type Object) at path "_id" for model "users"
+[2023-12-08 00:20:52] error Cast to ObjectId failed for value "{ _id: 'register-github' }" (type Object) at path "_id" for model "users"
+[2023-12-08 00:21:05] error getById error en userDao Cast to ObjectId failed for value "{ _id: 'register-github' }" (type Object) at path "_id" for model "users"
+[2023-12-08 00:21:05] error Cast to ObjectId failed for value "{ _id: 'register-github' }" (type Object) at path "_id" for model "users"
+[2023-12-08 00:21:09] error getById error en userDao Cast to ObjectId failed for value "{ _id: 'register-github' }" (type Object) at path "_id" for model "users"
+[2023-12-08 00:21:09] error Cast to ObjectId failed for value "{ _id: 'register-github' }" (type Object) at path "_id" for model "users"
+[2023-12-08 00:21:43] error getById error en userDao Cast to ObjectId failed for value "{ _id: 'register-github' }" (type Object) at path "_id" for model "users"
+[2023-12-08 00:21:43] error Cast to ObjectId failed for value "{ _id: 'register-github' }" (type Object) at path "_id" for model "users"
+[2023-12-08 00:25:01] error getById error en userDao Cast to ObjectId failed for value "register-github" (type string) at path "_id" for model "users"
+[2023-12-08 00:25:01] error Cast to ObjectId failed for value "register-github" (type string) at path "_id" for model "users"
+[2023-12-08 00:25:13] error getById error en userDao Cast to ObjectId failed for value "register-github" (type string) at path "_id" for model "users"
+[2023-12-08 00:25:13] error Cast to ObjectId failed for value "register-github" (type string) at path "_id" for model "users"
+[2023-12-08 00:39:17] error getById error en userDao Cast to ObjectId failed for value "register-github" (type string) at path "_id" for model "users"
+[2023-12-08 00:39:17] error Cast to ObjectId failed for value "register-github" (type string) at path "_id" for model "users"
+[2023-12-08 00:39:18] error getById error en userDao Cast to ObjectId failed for value "register-github" (type string) at path "_id" for model "users"
+[2023-12-08 00:39:18] error Cast to ObjectId failed for value "register-github" (type string) at path "_id" for model "users"
+[2023-12-08 00:43:08] error getById error en userDao Cast to ObjectId failed for value "register-github" (type string) at path "_id" for model "users"
+[2023-12-08 00:43:08] error Cast to ObjectId failed for value "register-github" (type string) at path "_id" for model "users"
+[2023-12-08 00:43:15] error getById error en userDao Cast to ObjectId failed for value "register-github" (type string) at path "_id" for model "users"
+[2023-12-08 00:43:15] error Cast to ObjectId failed for value "register-github" (type string) at path "_id" for model "users"
+[2023-12-08 01:03:05] error en el register user.dao users validation failed: first_name: Path `first_name` is required., last_name: Path `last_name` is required., email: Path `email` is required., age: Path `age` is required.
+[2023-12-08 01:05:15] error en el register user.dao users validation failed: first_name: Path `first_name` is required., last_name: Path `last_name` is required., email: Path `email` is required., age: Path `age` is required.
+[2023-12-08 01:06:20] error getById error en userDao Cast to ObjectId failed for value "register-hithub" (type string) at path "_id" for model "users"
+[2023-12-08 01:06:20] error Cast to ObjectId failed for value "register-hithub" (type string) at path "_id" for model "users"
+[2023-12-08 01:07:57] error getById error en userDao Cast to ObjectId failed for value "register-github" (type string) at path "_id" for model "users"
+[2023-12-08 01:07:57] error Cast to ObjectId failed for value "register-github" (type string) at path "_id" for model "users"
+[2023-12-08 01:08:00] error getById error en userDao Cast to ObjectId failed for value "register-github" (type string) at path "_id" for model "users"
+[2023-12-08 01:08:00] error Cast to ObjectId failed for value "register-github" (type string) at path "_id" for model "users"
+[2023-12-08 01:12:52] error getById error en userDao req is not defined
+[2023-12-08 01:12:52] error req is not defined
+[2023-12-08 01:19:06] error getById en userDao Cast to ObjectId failed for value "login" (type string) at path "_id" for model "users"
+[2023-12-08 01:19:06] error Cast to ObjectId failed for value "login" (type string) at path "_id" for model "users"
+[2023-12-08 01:23:56] error en el register user.dao users validation failed: first_name: Path `first_name` is required., last_name: Path `last_name` is required., email: Path `email` is required., age: Path `age` is required.
+[2023-12-08 01:25:00] error en el register user.dao users validation failed: first_name: Path `first_name` is required., last_name: Path `last_name` is required., email: Path `email` is required., age: Path `age` is required.
+[2023-12-08 07:56:01] error getById en userDao Cast to ObjectId failed for value "register" (type string) at path "_id" for model "users"
+[2023-12-08 07:56:01] error Cast to ObjectId failed for value "register" (type string) at path "_id" for model "users"
+[2023-12-08 08:05:08] error getById en userDao Cast to ObjectId failed for value "register" (type string) at path "_id" for model "users"
+[2023-12-08 08:05:08] error Cast to ObjectId failed for value "register" (type string) at path "_id" for model "users"
+[2023-12-08 08:11:10] error getById en userDao mongoose is not defined
+[2023-12-08 08:11:10] error mongoose is not defined
+[2023-12-08 08:11:58] error error en login user.dao Parameter "filter" to findOne() must be an object, got "gaviclcarrizo@gmail.com" (type string)
+[2023-12-08 08:12:21] error error en login user.dao Parameter "filter" to findOne() must be an object, got "gaviclcarrizo@gmail.com" (type string)
+[2023-12-08 08:14:23] error getById en userDao mongoose is not defined
+[2023-12-08 08:14:23] error mongoose is not defined
+[2023-12-08 08:19:09] error UserDao.getById is not a function
+[2023-12-08 08:20:44] error UserDao.getById is not a function
+[2023-12-08 08:22:52] error invalid token
+[2023-12-08 08:24:42] error invalid token
+[2023-12-08 08:25:23] error invalid signature
+[2023-12-08 08:25:39] error invalid token
+[2023-12-08 08:26:02] error UserDao.getById is not a function
+[2023-12-08 08:33:15] error UserDao.getById is not a function
+[2023-12-08 08:34:06] error UserDao.getById is not a function
+[2023-12-08 08:34:38] error UserDao.getById is not a function
+[2023-12-08 08:36:55] error UserDao.getById is not a function
+[2023-12-08 08:37:05] error UserDao.getById is not a function
+[2023-12-08 08:37:17] error UserDao.getById is not a function
+[2023-12-08 08:37:57] error getById en user.dao Cast to ObjectId failed for value "login" (type string) at path "_id" for model "users"
+[2023-12-08 08:37:57] error getById en user.service Cast to ObjectId failed for value "login" (type string) at path "_id" for model "users"
+[2023-12-08 08:39:55] error UserDao.getById is not a function
+[2023-12-08 08:46:58] error UserDao.getById is not a function
+[2023-12-08 08:50:08] error UserDao.getById is not a function
+[2023-12-08 08:57:29] error error en user service resetPass TypeError: Cannot destructure property 'email' of 'user' as it is undefined.
+[2023-12-08 08:57:29] error undefined
+[2023-12-08 09:16:50] error error en login user.dao Parameter "filter" to findOne() must be an object, got "gaviclcarrizo@gmail.com" (type string)
+[2023-12-08 09:16:58] error error en login user.dao Parameter "filter" to findOne() must be an object, got "gaviclcarrizo@gmail.com" (type string)
+[2023-12-08 09:18:00] error  en user service resetPass TypeError: Cannot destructure property 'email' of 'user' as it is undefined.
+[2023-12-08 09:18:00] error undefined
+[2023-12-08 09:21:19] error  en user service resetPass TypeError: Cannot destructure property 'email' of 'user' as it is undefined.
+[2023-12-08 09:21:19] error undefined
+[2023-12-08 09:22:10] error  en user service resetPass TypeError: Cannot destructure property 'email' of 'user' as it is undefined.
+[2023-12-08 09:22:10] error undefined
+[2023-12-08 09:22:51] error  en user service resetPass TypeError: Cannot destructure property 'email' of 'user' as it is undefined.
+[2023-12-08 09:22:51] error undefined
+[2023-12-08 09:31:21] error  en user service resetPass TypeError: Cannot destructure property 'email' of 'user' as it is undefined.
+[2023-12-08 09:31:21] error undefined
+[2023-12-08 09:33:27] error  en user service resetPass ReferenceError: generateToken is not defined
+[2023-12-08 09:33:27] error undefined
+[2023-12-08 10:29:54] error getById en user.dao Cast to ObjectId failed for value "login" (type string) at path "_id" for model "users"
+[2023-12-08 10:29:54] error getById en user.service Cast to ObjectId failed for value "login" (type string) at path "_id" for model "users"
+[2023-12-08 10:33:25] error getById en user.dao Cast to ObjectId failed for value "login" (type string) at path "_id" for model "users"
+[2023-12-08 10:33:25] error getById en user.service Cast to ObjectId failed for value "login" (type string) at path "_id" for model "users"
+[2023-12-08 10:36:29] error error en login user.dao Parameter "filter" to findOne() must be an object, got "gaviclcarrizo@gmail.com" (type string)
+[2023-12-08 10:44:04] error getById en user.dao Cast to ObjectId failed for value "reset-pass" (type string) at path "_id" for model "users"
+[2023-12-08 10:44:04] error getById en user.service Cast to ObjectId failed for value "reset-pass" (type string) at path "_id" for model "users"
+[2023-12-08 10:46:48] error error en login user.dao Parameter "filter" to findOne() must be an object, got "gaviclcarrizo@gmail.com" (type string)
+[2023-12-08 10:49:17] error getById en user.dao Cast to ObjectId failed for value "reset-pass" (type string) at path "_id" for model "users"
+[2023-12-08 10:49:17] error getById en user.service Cast to ObjectId failed for value "reset-pass" (type string) at path "_id" for model "users"
+[2023-12-08 10:49:57] error getById en user.dao Cast to ObjectId failed for value "reset-pass" (type string) at path "_id" for model "users"
+[2023-12-08 10:49:57] error getById en user.service Cast to ObjectId failed for value "reset-pass" (type string) at path "_id" for model "users"
+[2023-12-08 11:23:20] error getById en user.dao Cast to ObjectId failed for value "register-github" (type string) at path "_id" for model "users"
+[2023-12-08 11:23:20] error getById en user.service Cast to ObjectId failed for value "register-github" (type string) at path "_id" for model "users"
+[2023-12-08 11:23:26] error getById en user.dao Cast to ObjectId failed for value "register-github" (type string) at path "_id" for model "users"
+[2023-12-08 11:23:26] error getById en user.service Cast to ObjectId failed for value "register-github" (type string) at path "_id" for model "users"
+[2023-12-08 11:24:57] error getById en user.dao Cast to ObjectId failed for value "register" (type string) at path "_id" for model "users"
+[2023-12-08 11:24:57] error getById en user.service Cast to ObjectId failed for value "register" (type string) at path "_id" for model "users"
+[2023-12-08 11:25:58] error getById en user.dao Cast to ObjectId failed for value "register" (type string) at path "_id" for model "users"
+[2023-12-08 11:25:58] error getById en user.service Cast to ObjectId failed for value "register" (type string) at path "_id" for model "users"
+[2023-12-08 11:26:34] error getById en user.dao Cast to ObjectId failed for value "register-github" (type string) at path "_id" for model "users"
+[2023-12-08 11:26:34] error getById en user.service Cast to ObjectId failed for value "register-github" (type string) at path "_id" for model "users"
+[2023-12-08 11:26:35] error getById en user.dao Cast to ObjectId failed for value "register-github" (type string) at path "_id" for model "users"
+[2023-12-08 11:26:35] error getById en user.service Cast to ObjectId failed for value "register-github" (type string) at path "_id" for model "users"
+[2023-12-08 11:28:37] error getById en user.dao Cast to ObjectId failed for value "register-github" (type string) at path "_id" for model "users"
+[2023-12-08 11:28:37] error getById en user.service Cast to ObjectId failed for value "register-github" (type string) at path "_id" for model "users"
+[2023-12-08 11:28:37] error getById en user.dao Cast to ObjectId failed for value "register-github" (type string) at path "_id" for model "users"
+[2023-12-08 11:28:37] error getById en user.service Cast to ObjectId failed for value "register-github" (type string) at path "_id" for model "users"
+[2023-12-08 11:29:08] error getById en user.dao Cast to ObjectId failed for value "register" (type string) at path "_id" for model "users"
+[2023-12-08 11:29:08] error getById en user.service Cast to ObjectId failed for value "register" (type string) at path "_id" for model "users"
+[2023-12-08 11:29:23] error en el register user.dao users validation failed: first_name: Path `first_name` is required., last_name: Path `last_name` is required., email: Path `email` is required., age: Path `age` is required.
+[2023-12-08 11:35:11] error en el register user.dao users validation failed: first_name: Path `first_name` is required., last_name: Path `last_name` is required., email: Path `email` is required., age: Path `age` is required.
+[2023-12-08 11:39:19] error en el register user.dao users validation failed: first_name: Path `first_name` is required., last_name: Path `last_name` is required., email: Path `email` is required., age: Path `age` is required.
+[2023-12-08 11:44:51] error en el register user.dao users validation failed: first_name: Path `first_name` is required., last_name: Path `last_name` is required., email: Path `email` is required., age: Path `age` is required.
+[2023-12-08 11:55:23] error en el register user.dao users validation failed: first_name: Path `first_name` is required., last_name: Path `last_name` is required., email: Path `email` is required., age: Path `age` is required.
+[2023-12-08 11:59:09] error en el register user.dao users validation failed: first_name: Path `first_name` is required., last_name: Path `last_name` is required., email: Path `email` is required., age: Path `age` is required.
+[2023-12-08 12:04:26] error No recipients defined
+[2023-12-08 12:08:19] error en el register user.dao users validation failed: age: Path `age` is required.
+[2023-12-08 12:12:01] error en el register user.dao users validation failed: first_name: Path `first_name` is required., last_name: Path `last_name` is required., email: Path `email` is required., age: Path `age` is required.
+[2023-12-08 12:30:52] error en el register user.dao users validation failed: first_name: Path `first_name` is required., last_name: Path `last_name` is required., email: Path `email` is required., age: Path `age` is required.
+[2023-12-08 12:30:52] error ValidationError: first_name: Path `first_name` is required., last_name: Path `last_name` is required., email: Path `email` is required., age: Path `age` is required.
+[2023-12-08 12:59:39] error en el register user.dao users validation failed: first_name: Path `first_name` is required., last_name: Path `last_name` is required., email: Path `email` is required., age: Path `age` is required.
+[2023-12-08 12:59:39] error ValidationError: first_name: Path `first_name` is required., last_name: Path `last_name` is required., email: Path `email` is required., age: Path `age` is required.
+[2023-12-08 13:03:38] error en el register user.dao users validation failed: first_name: Path `first_name` is required., last_name: Path `last_name` is required., email: Path `email` is required., age: Path `age` is required.
+[2023-12-08 13:03:38] error ValidationError: first_name: Path `first_name` is required., last_name: Path `last_name` is required., email: Path `email` is required., age: Path `age` is required.
+[2023-12-08 13:04:54] error en el register user.dao users validation failed: first_name: Path `first_name` is required., last_name: Path `last_name` is required., email: Path `email` is required., age: Path `age` is required.
+[2023-12-08 13:04:54] error ValidationError: first_name: Path `first_name` is required., last_name: Path `last_name` is required., email: Path `email` is required., age: Path `age` is required.
+[2023-12-08 13:08:48] error en el register user.dao users validation failed: first_name: Path `first_name` is required., last_name: Path `last_name` is required., email: Path `email` is required., age: Path `age` is required.
+[2023-12-08 13:08:48] error ValidationError: first_name: Path `first_name` is required., last_name: Path `last_name` is required., email: Path `email` is required., age: Path `age` is required.
+[2023-12-08 13:08:56] error en el register user.dao users validation failed: last_name: Path `last_name` is required., email: Path `email` is required., age: Path `age` is required.
+[2023-12-08 13:08:56] error ValidationError: last_name: Path `last_name` is required., email: Path `email` is required., age: Path `age` is required.
+[2023-12-08 13:10:40] error en el register user.dao users validation failed: last_name: Path `last_name` is required., email: Path `email` is required., age: Path `age` is required.
+[2023-12-08 13:10:40] error ValidationError: last_name: Path `last_name` is required., email: Path `email` is required., age: Path `age` is required.
+[2023-12-08 13:11:39] error en el register user.dao users validation failed: last_name: Path `last_name` is required.
+[2023-12-08 13:11:39] error ValidationError: last_name: Path `last_name` is required.
+[2023-12-08 13:27:15] error getById en user.dao Cast to ObjectId failed for value "register-github" (type string) at path "_id" for model "users"
+[2023-12-08 13:27:15] error getById en user.service Cast to ObjectId failed for value "register-github" (type string) at path "_id" for model "users"
+[2023-12-08 13:27:53] error No recipients defined
+[2023-12-08 13:29:07] error No recipients defined

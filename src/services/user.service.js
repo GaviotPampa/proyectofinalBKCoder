@@ -1,9 +1,8 @@
-import UserDaoMongoDB from "../persistence/daos/mongodb/user.dao.js";
-const userDao = new UserDaoMongoDB();
+import UserDao from "../persistence/daos/mongodb/user.dao.js";
+const userDao = new UserDao();
 import logger from "../middlewares/logger-mw.js";
-
-/* import { getByIdDTO } from "../persistence/repositories/user/user.repository.js"; */
-import { sendMail } from "../controllers/gmail.controllers.js";
+/* 
+import * as service from "../persistence/repositories/user/user.repository.js"; */
 
 export const getAll = async () => {
   try {
@@ -21,13 +20,13 @@ export const getById = async (id) => {
     if (!item) return false;
     else return item;
   } catch (error) {
-    logger.error(error);
+    logger.error("getById en user.service", error);
   }
 };
 
 export const update = async (id, obj) => {
   try {
-    const item = await userDao.getById(id);
+    const item = await userDao.update(id);
     if (!item) return false;
     else return await userDao.update(id, obj);
   } catch (error) {
@@ -37,7 +36,7 @@ export const update = async (id, obj) => {
 
 export const eliminate = async (id) => {
   try {
-    const item = await userDao.getById(id);
+    const item = await this.getById(id);
     if (!item) return false;
     else return await userDao.eliminate(id);
   } catch (error) {
@@ -45,22 +44,20 @@ export const eliminate = async (id) => {
   }
 };
 
-export const register = async (req, res, next) => {
-  logger.error("error register user.service", register);
+export const register = async (user) => {
   try {
-    res.json({
-      msg: "Register ok",
-      session: req.session,
-    });
+    const response = await userDao.register(user);
+   return response;
   } catch (error) {
-    next(error.message);
+    logger.error(error);
+    throw new Error(error.message);
   }
 };
 
-export const login = async (req, res, next) => {
+export const login = async (req, res) => {
   try {
     if (req.session.user) {
-      const user = await userDao.getById(req.session.passport.user);
+      const user = await userDao.login(req.session.passport.user);
       res.json({
         msg: "Login ok",
         user,
@@ -72,22 +69,22 @@ export const login = async (req, res, next) => {
       res.json({ msg: "Login error en user.service" });
     }
   } catch (error) {
-    next(error.message);
+    logger.error(error);
   }
 };
 
-export const profile = async (req, res, next) => {
+export const profile = async (req, res) => {
   try {
     res.json({
       msg: "Profile user.service",
       session: req.session,
     });
   } catch (error) {
-    next(error.message);
+    logger.error(error);
   }
 };
 
-export const githubResponse = async (req, res, next) => {
+export const githubResponse = async (req, res,next) => {
   try {
     // console.log(req.user)
     const { first_name, last_name, email, isGithub } = req.user;
@@ -102,7 +99,8 @@ export const githubResponse = async (req, res, next) => {
       },
     });
   } catch (error) {
-    next(error.message);
+    logger.error(error);
+    next(error);
   }
 };
 export const addCartToUser = async (userId, cartId) => {
@@ -116,9 +114,9 @@ export const addCartToUser = async (userId, cartId) => {
   }
 };
 
-/* export const getByIdDTO = async (id) => {
+/* export const getByIdDto = async (id) => {
   try {
-    const user = await userRepository.getByIdDTO(id);
+    const user = await service.getByIdDto(id);
     if (!user) return false;
     else return user;
   } catch (error) {
@@ -132,14 +130,22 @@ export const resetPass = async (user) => {
     if (!token) return false;
     return await sendMail(user, "resetPass", token);
   } catch (error) {
-    logger.error(error);
+    logger.error(" en user service resetPass", error);
+    throw new Error(error.message);
+  }
+};
+
+export const updatePass = async (user, password) => {
+  try {
+    await userDao.updatePass(user, password);
+  } catch (error) {
     throw new Error(error.message);
   }
 };
 
 export const upload = async (id) => {
   try {
-    const item = await userDao.getById(id);
+    const item = await userDao.upload(id);
     if (!item) return false;
     else return item;
   } catch (error) {

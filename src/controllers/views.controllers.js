@@ -38,3 +38,7 @@ export const chat = (req, res) => {
 export const home = (req, res) => {
   res.render("home");
 };
+
+export const resetPass = (req, res) => {
+  res.render("userRestart");
+}

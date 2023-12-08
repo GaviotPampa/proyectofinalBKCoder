@@ -1,26 +1,23 @@
 import { UserModel } from "./models/user.model.js";
 import { createHash, isValidPassword } from "../../../utils.js";
 import config from "../../../config/config.js";
-import jwt from 'jsonwebtoken';
+import jwt from "jsonwebtoken";
 import logger from "../../../middlewares/logger-mw.js";
 
 export default class UserDao {
-
-  
   async getAll() {
     try {
       const response = await UserModel.find({});
-      logger.info("response en user.dao",response);
+      logger.info("response en user.dao", response);
       return response;
     } catch (error) {
-      logger.error("error en user.dao"+ error);
+      logger.error("error en user.dao" + error);
     }
   }
 
-
   async update(id, obj) {
     try {
-      await this.updateOne({ _id: id }, obj);
+      await UserModel.updateOne({ _id: id }, obj, { new: true });
       return obj;
     } catch (error) {
       logger.error(error);
@@ -29,7 +26,7 @@ export default class UserDao {
 
   async eliminate(id) {
     try {
-      const response = await this.findByIdAndDelete(id);
+      const response = await UserModel.findByIdAndDelete(id);
       return response;
     } catch (error) {
       logger.error(error);
@@ -68,7 +65,7 @@ export default class UserDao {
         const passValid = isValidPassword(password, userExist);
         console.log("PASSValid in login user.dao:", passValid);
         if (!passValid) return false;
-        else return this.generateToken (userExist, '15m');
+        else return this.generateToken(userExist, "15m");
       }
       return false;
     } catch (error) {
@@ -78,21 +75,31 @@ export default class UserDao {
 
   async getById(id) {
     try {
-      const userExist = await UserModel.findById({ _id: id });
-      console.log(userExist);
-      if (userExist) {
-        return userExist;
-      }
-      return false;
+      const userExist = await UserModel.findById(
+        id
+      ); /* .explain("executionStats") */
+      return userExist;
     } catch (error) {
-      logger.error(error);
-      throw new Error(error);
+      logger.error("getById en user.dao", error);
+      throw new Error(error.message);
     }
   }
 
+/*   async getByIdDto(id) {
+    try {
+      const userExist = await UserModel.findById(
+        id
+      ); 
+      return userExist;
+    } catch (error) {
+      logger.error("getByIdDto en user.dao", error);
+      throw new Error(error.message);
+    }
+  } */
+
   async getByEmail(email) {
     try {
-      const userExist = await UserModel.findOne({ email});
+      const userExist = await UserModel.findOne({ email });
       console.log(userExist);
       if (userExist) {
         return userExist;
@@ -105,7 +112,7 @@ export default class UserDao {
 
   async profile(email) {
     try {
-      const userExist = await UserModel.findOne({ email });
+      const userExist = await this.getByEmail({email})/*  UserModel.findOne({ email }) */;
       console.log(userExist);
       if (userExist) {
         return userExist;
@@ -115,12 +122,12 @@ export default class UserDao {
       throw new Error(error);
     }
   }
-/**
- * Genera el Token del usuario
- * @param {*} user 
- * @param {*} timeExp tiempo de expiración
- * @returns token
- */
+  /**
+   * Genera el Token del usuario
+   * @param {*} user
+   * @param {*} timeExp tiempo de expiración
+   * @returns token
+   */
   async generateToken(user, timeExp) {
     const payload = {
       userId: user._id,
@@ -136,9 +143,33 @@ export default class UserDao {
       const { email } = user;
       const userExist = await this.getByEmail(email);
       if (!userExist) return false;
-      return generateToken(userExist, "1h");
+      return this.generateToken(userExist, "1h");
     } catch (error) {
       throw new Error(error);
     }
   }
+
+  async updatePass(user, password) {
+    try {
+      const isEquel = isValidPassword(user, password);
+      if (!isEquel) return false;
+      const newPass = createHash(password);
+      return await this.update(user_id, { password: newPass });
+    } catch (error) {
+      throw new Error(error);
+    }
+  }
+  async upload(id) {
+    try {
+    } catch (error) {
+      throw new Error(error);
+    }
+  }
+  /*   async changeUserRole(user) {
+    try {
+
+    } catch (error) {
+      throw new Error(error);
+    }
+  } */
 }

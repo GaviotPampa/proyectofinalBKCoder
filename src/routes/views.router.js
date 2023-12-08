@@ -5,37 +5,25 @@ import { Router } from "express";
 const router = Router();
 
 import * as controller from "../controllers/views.controllers.js";
-/* import {
-  login,
-  register,
-  profile,
-  products,
-} from "../controllers/views.controllers.js"; */
 
 router
   .get("/home", (req, res) => {
     res.render("home");
   })
   .get("/login", (req, res) => {
-    res.render(login);
+    res.render("login");
   })
   .get("/register", (req, res) => {
-    res.render(register);
+    res.render("register");
   })
-  /*  .get('/login', controller.login)
-  .get('/register',controller.register)
-  .get('/profile', controller.profile) */
-   .get("/profile", (req, res) => {
-    res.render(profile);
+
+  .get("/profile", (req, res) => {
+    res.render("profile");
   })
   .get("/error-login", controller.errorLogin)
-  /*  .get("/error-register", controller.errorRegister) */
-  .get("/error-register", (req, res) => {
-    res.render(errorRegister);
-  })
-  .get("/user-restart", (req, res) => {
-    res.render("userRestart", {});
-  })
+  .get("/error-register", controller.errorRegister)
+
+  .get("/reset-pass", controller.resetPass)
   /*  .get("/products", controller.products) */
   /* router.get("/:id", cartId); */
   .get("/products", (req, res) => {

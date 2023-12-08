@@ -9,14 +9,16 @@
       <label>Password:</label>
       <input type="password" name="password" id="password" />
     </div>
-     <div class="contenedor-input">
+    <div class="contenedor-input">
       <label>Role:</label>
       <input type="role" name="role" id="role" />
     </div>
-    <div class="login">
+   {{!--  <div class="login">
       <input class="button" type="submit" value="LOGIN" />
-    </div>
+    </div> --}}
+  
     <div class="login">
+        <button class="button btn-secundary" onclick="location.href='/api/sessions/profile'">Login</button>
       <button
         class="login button"
         onclick="location.href='/api/users/register-github'"

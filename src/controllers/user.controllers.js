@@ -1,9 +1,10 @@
 import logger from "../middlewares/logger-mw.js";
 import UserDao from "../persistence/daos/mongodb/user.dao.js";
+const userDao = new UserDao();
+
 import { HttpResponse } from "../utils/http.response.js";
 const httpResponse = new HttpResponse();
 import { sendMail } from "./gmail.controllers.js";
-const userDao = new UserDao();
 import * as service from "../services/user.service.js";
 
 export const getAll = async (req, res, next) => {
@@ -32,6 +33,19 @@ export const getById = async (req, res, next) => {
     next(error.message);
   }
 };
+
+/* export const getByIdDto = async (req, res, next) => {
+  try {
+    const uid = req.params.id;
+    const user = await service.getByIdDto(uid);
+    console.log(uid, user);
+    if (!user) return httpResponse.NotFound(res, "User not found by uid" + uid);
+    else httpResponse.Ok(res, user);
+  } catch (error) {
+    logger.error("error en getByIdDto en user.controller", error);
+    next(error.message);
+  }
+}; */
 
 export const update = async (req, res, next) => {
   try {
@@ -67,17 +81,17 @@ export const eliminate = async (req, res, next) => {
 };
 
 /* CUANDO SE REGISTRE EL USUSARIO SE HACE ENVIO DE MAIL */
-export const register = async (req, res) => {
+export const register = async (req, res, next) => {
   try {
     const user = req.body;
     const newUser = await userDao.register(user);
     await sendMail(user, "register");
     if (newUser) res.redirect("/api/sessions/login");
     else res.redirect("/api/sessions/error-register");
-    logger.error("en el register en user.controllers", newUser);
+    logger.info(" register en user.controllers", newUser);
   } catch (error) {
     logger.error(error);
-    throw new Error(error.message);
+    next(error);
   }
 };
 
@@ -88,8 +102,8 @@ export const login = async (req, res, next) => {
     if (user) {
       req.session.email = email;
       req.session.password = password;
-      return httpResponse.Ok(res, user);
-      /*  res.redirect("/api/sessions/profile"); */
+      /*  return httpResponse.Ok(res, user); */
+      res.redirect("/api/sessions/profile");
     } else res.redirect("/api/sessions/error-login");
     logger.info("login user.controller ok", user);
   } catch (error) {
@@ -152,6 +166,23 @@ export const resetPass = async (req, res, next) => {
     return httpResponse.Ok(res, { msg: "Email reset pass sent successfully" });
   } catch (error) {
     logger.error("resetPass failed user.controller".error);
+    next(error.message);
+  }
+};
+
+export const updatePass = async (req, res, next) => {
+  try {
+    const user = req.user;
+    const { password } = req.body;
+    const { tokenResetPass } = req.cookies;
+    if (!tokenResetPass)
+      return httpResponse.Forbidden(res, "tokenResetPass exp");
+    const updatePass = await service.updatePass(user, password);
+    if (!updatePass) return httpResponse.BadRequest(res, "Pass update failed");
+    res.clearCookie("tokenResetPass");
+    return httpResponse.Ok(res, updatePass);
+  } catch (error) {
+    logger.error("updatePass failed user.controller".error);
     next(error.message);
   }
 };
