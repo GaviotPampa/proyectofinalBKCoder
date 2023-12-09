@@ -53,9 +53,9 @@ export default class ProdDaoMDB {
     }
   }
 
-  async getById(pid) {
+  async getById(id) {
     try {
-      const response = await ProductModel.findById(pid);
+      const response = await ProductModel.findById(id);
       return response;
     } catch (error) {
       logger.warning("something unexpected happened: " + error.message);
@@ -71,7 +71,16 @@ export default class ProdDaoMDB {
     }
   }
 
-  async create(obj) {
+ /*  async create(obj) {
+    try {
+      const response = await ProductModel.create(obj);
+      return response;
+    } catch (error) {
+      throw new Error(error.message);
+    }
+  } */
+
+  async createProdDto(obj) {
     try {
       const response = await ProductModel.create(obj);
       return response;
@@ -80,9 +89,9 @@ export default class ProdDaoMDB {
     }
   }
 
-  async updateProd(id, obj) {
+  async updateProd(pid, obj) {
     try {
-      const response = await ProductModel.findByIdAndUpdate({ _id: id }, obj, {
+      const response = await ProductModel.findByIdAndUpdate( pid , obj, {
         new: true,
       });
       return response;

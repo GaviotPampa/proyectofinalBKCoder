@@ -22,10 +22,10 @@ const prodDao = new ProdDaoMDB();
     }
   }
 
-  export const  createProd = async (obj) =>{
+  export const  create= async (obj) =>{
     try {
       const prodDTO = new ProdReqDTO(obj);
-      return await prodDao.create(prodDTO);
+      return await prodDao.createProdDto(prodDTO);
     } catch (error) {
       logger.error(error);
     }

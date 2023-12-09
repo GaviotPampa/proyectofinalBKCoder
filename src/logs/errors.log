@@ -399,3 +399,115 @@
 [2023-12-08 13:27:15] error getById en user.service Cast to ObjectId failed for value "register-github" (type string) at path "_id" for model "users"
 [2023-12-08 13:27:53] error No recipients defined
 [2023-12-08 13:29:07] error No recipients defined
+[2023-12-08 13:33:19] error getById en user.dao Cast to ObjectId failed for value "login" (type string) at path "_id" for model "users"
+[2023-12-08 13:33:19] error getById en user.service Cast to ObjectId failed for value "login" (type string) at path "_id" for model "users"
+[2023-12-08 14:25:21] error getById en user.dao Cast to ObjectId failed for value "register-github" (type string) at path "_id" for model "users"
+[2023-12-08 14:25:21] error getById en user.service Cast to ObjectId failed for value "register-github" (type string) at path "_id" for model "users"
+[2023-12-08 14:26:31] error getById en user.dao Cast to ObjectId failed for value "register-github" (type string) at path "_id" for model "users"
+[2023-12-08 14:26:31] error getById en user.service Cast to ObjectId failed for value "register-github" (type string) at path "_id" for model "users"
+[2023-12-08 14:36:20] error getById en user.dao Cast to ObjectId failed for value "register-github" (type string) at path "_id" for model "users"
+[2023-12-08 14:36:20] error getById en user.service Cast to ObjectId failed for value "register-github" (type string) at path "_id" for model "users"
+[2023-12-08 14:38:39] error getById en user.dao Cast to ObjectId failed for value "register-github" (type string) at path "_id" for model "users"
+[2023-12-08 14:38:39] error getById en user.service Cast to ObjectId failed for value "register-github" (type string) at path "_id" for model "users"
+[2023-12-08 14:38:40] error getById en user.dao Cast to ObjectId failed for value "register-github" (type string) at path "_id" for model "users"
+[2023-12-08 14:38:40] error getById en user.service Cast to ObjectId failed for value "register-github" (type string) at path "_id" for model "users"
+[2023-12-08 14:39:24] error getById en user.dao Cast to ObjectId failed for value "register-github" (type string) at path "_id" for model "users"
+[2023-12-08 14:39:24] error getById en user.service Cast to ObjectId failed for value "register-github" (type string) at path "_id" for model "users"
+[2023-12-08 14:39:25] error getById en user.dao Cast to ObjectId failed for value "register-github" (type string) at path "_id" for model "users"
+[2023-12-08 14:39:25] error getById en user.service Cast to ObjectId failed for value "register-github" (type string) at path "_id" for model "users"
+[2023-12-08 15:00:46] error service is not defined
+[2023-12-08 15:30:09] error en product controller Cast to ObjectId failed for value "{ _id: undefined }" (type Object) at path "_id" for model "products"
+[2023-12-08 15:30:42] error en product controller Cast to ObjectId failed for value "{ _id: undefined }" (type Object) at path "_id" for model "products"
+[2023-12-08 15:32:50] error en product controller Cast to ObjectId failed for value "{ _id: undefined }" (type Object) at path "_id" for model "products"
+[2023-12-08 15:33:06] error en product controller Cast to ObjectId failed for value "{ _id: undefined }" (type Object) at path "_id" for model "products"
+[2023-12-08 15:33:22] error en product controller Cast to ObjectId failed for value "{ _id: undefined }" (type Object) at path "_id" for model "products"
+[2023-12-08 15:33:38] error en product controller Cast to ObjectId failed for value "{ _id: undefined }" (type Object) at path "_id" for model "products"
+[2023-12-08 15:36:41] error en product controller Cast to ObjectId failed for value "{ _id: undefined }" (type Object) at path "_id" for model "products"
+[2023-12-08 19:35:43] error ProductModel.createProdDto is not a function
+[2023-12-08 19:37:02] error prodDao.createProdDto is not a function
+[2023-12-08 19:41:05] error products validation failed: titulo: Path `titulo` is required.
+[2023-12-08 19:43:23] error products validation failed: titulo: Path `titulo` is required.
+[2023-12-08 19:44:10] error products validation failed: titulo: Path `titulo` is required., importe: Path `importe` is required., categoria: Path `categoria` is required.
+[2023-12-08 19:44:38] error products validation failed: titulo: Path `titulo` is required., importe: Path `importe` is required., codigo: Path `codigo` is required., categoria: Path `categoria` is required.
+[2023-12-08 19:45:13] error products validation failed: titulo: Path `titulo` is required., importe: Path `importe` is required., codigo: Path `codigo` is required., categoria: Path `categoria` is required.
+[2023-12-08 19:45:30] error products validation failed: titulo: Path `titulo` is required., importe: Path `importe` is required., codigo: Path `codigo` is required., categoria: Path `categoria` is required.
+[2023-12-08 19:48:40] error products validation failed: titulo: Path `titulo` is required., importe: Path `importe` is required., codigo: Path `codigo` is required., categoria: Path `categoria` is required.
+[2023-12-08 19:50:31] error products validation failed: titulo: Path `titulo` is required., importe: Path `importe` is required., codigo: Path `codigo` is required., categoria: Path `categoria` is required.
+[2023-12-08 19:51:37] error products validation failed: titulo: Path `titulo` is required., importe: Path `importe` is required., codigo: Path `codigo` is required., categoria: Path `categoria` is required.
+[2023-12-08 19:52:23] error products validation failed: titulo: Path `titulo` is required., importe: Path `importe` is required., codigo: Path `codigo` is required., categoria: Path `categoria` is required.
+[2023-12-08 19:53:07] error products validation failed: titulo: Path `titulo` is required., importe: Path `importe` is required., codigo: Path `codigo` is required., categoria: Path `categoria` is required.
+[2023-12-08 19:53:09] error products validation failed: titulo: Path `titulo` is required., importe: Path `importe` is required., codigo: Path `codigo` is required., categoria: Path `categoria` is required.
+[2023-12-08 19:53:09] error products validation failed: titulo: Path `titulo` is required., importe: Path `importe` is required., codigo: Path `codigo` is required., categoria: Path `categoria` is required.
+[2023-12-08 19:53:09] error products validation failed: titulo: Path `titulo` is required., importe: Path `importe` is required., codigo: Path `codigo` is required., categoria: Path `categoria` is required.
+[2023-12-08 19:53:09] error products validation failed: titulo: Path `titulo` is required., importe: Path `importe` is required., codigo: Path `codigo` is required., categoria: Path `categoria` is required.
+[2023-12-08 19:54:23] error products validation failed: titulo: Path `titulo` is required., importe: Path `importe` is required., codigo: Path `codigo` is required., categoria: Path `categoria` is required.
+[2023-12-08 19:54:55] error products validation failed: titulo: Path `titulo` is required., importe: Path `importe` is required., codigo: Path `codigo` is required., categoria: Path `categoria` is required.
+[2023-12-08 19:55:25] error products validation failed: importe: Path `importe` is required., codigo: Path `codigo` is required., categoria: Path `categoria` is required.
+[2023-12-08 19:56:11] error products validation failed: importe: Path `importe` is required.
+[2023-12-08 19:56:12] error products validation failed: importe: Path `importe` is required.
+[2023-12-08 20:03:25] error prodDao.create is not a function
+[2023-12-08 20:04:52] error Cannot access 'prodDTO' before initialization
+[2023-12-08 20:06:03] error prodDao.create is not a function
+[2023-12-08 20:06:57] error ProductModel.createProdDto is not a function
+[2023-12-08 20:09:53] error ProductModel.createProdDto is not a function
+[2023-12-08 20:18:39] error en product controller Cast to ObjectId failed for value "{ _id: undefined }" (type Object) at path "_id" for model "products"
+[2023-12-08 20:19:16] error en product controller Cannot set headers after they are sent to the client
+[2023-12-08 20:21:12] error en product controller req is not defined
+[2023-12-08 20:22:29] error products validation failed: titulo: Path `titulo` is required., importe: Path `importe` is required., codigo: Path `codigo` is required., categoria: Path `categoria` is required.
+[2023-12-08 20:22:50] error products validation failed: titulo: Path `titulo` is required., importe: Path `importe` is required., codigo: Path `codigo` is required., categoria: Path `categoria` is required.
+[2023-12-08 20:23:53] error products validation failed: titulo: Path `titulo` is required., importe: Path `importe` is required., codigo: Path `codigo` is required., categoria: Path `categoria` is required.
+[2023-12-08 20:26:01] error products validation failed: titulo: Path `titulo` is required., importe: Path `importe` is required., codigo: Path `codigo` is required., categoria: Path `categoria` is required.
+[2023-12-08 20:27:08] error products validation failed: titulo: Path `titulo` is required., importe: Path `importe` is required., codigo: Path `codigo` is required., categoria: Path `categoria` is required.
+[2023-12-08 22:27:57] error en product controller Cannot read properties of undefined (reading 'getById')
+[2023-12-08 22:32:23] error Cannot read properties of null (reading 'titulo')
+[2023-12-08 22:32:42] error Cannot read properties of null (reading 'titulo')
+[2023-12-08 22:32:58] error Cannot read properties of null (reading 'titulo')
+[2023-12-08 22:33:12] error Cannot read properties of null (reading 'titulo')
+[2023-12-08 22:33:28] error Cannot read properties of null (reading 'titulo')
+[2023-12-08 22:34:09] error Cannot read properties of null (reading 'titulo')
+[2023-12-08 22:34:24] error Cannot read properties of null (reading 'titulo')
+[2023-12-08 22:42:11] error Cannot read properties of null (reading 'titulo')
+[2023-12-08 22:42:21] error Cannot read properties of null (reading 'titulo')
+[2023-12-08 22:42:35] error Cannot read properties of null (reading 'titulo')
+[2023-12-08 22:42:46] error Cannot read properties of null (reading 'titulo')
+[2023-12-08 22:42:53] error Cannot read properties of null (reading 'titulo')
+[2023-12-08 22:43:09] error Cannot read properties of null (reading 'titulo')
+[2023-12-08 22:43:33] error Cannot read properties of null (reading 'titulo')
+[2023-12-08 22:43:36] error Cannot read properties of null (reading 'titulo')
+[2023-12-08 22:43:42] error Cannot read properties of null (reading 'titulo')
+[2023-12-08 22:44:10] error Cannot read properties of null (reading 'titulo')
+[2023-12-08 22:44:19] error Cannot read properties of null (reading 'titulo')
+[2023-12-08 22:44:29] error Cannot read properties of null (reading 'titulo')
+[2023-12-08 22:45:54] error Cannot read properties of null (reading 'titulo')
+[2023-12-08 22:45:57] error Cannot read properties of null (reading 'titulo')
+[2023-12-08 22:45:57] error Cannot read properties of null (reading 'titulo')
+[2023-12-08 22:45:57] error Cannot read properties of null (reading 'titulo')
+[2023-12-08 22:45:58] error Cannot read properties of null (reading 'titulo')
+[2023-12-08 22:45:58] error Cannot read properties of null (reading 'titulo')
+[2023-12-08 22:45:58] error Cannot read properties of null (reading 'titulo')
+[2023-12-08 22:45:58] error Cannot read properties of null (reading 'titulo')
+[2023-12-08 22:45:58] error Cannot read properties of null (reading 'titulo')
+[2023-12-08 22:45:59] error Cannot read properties of null (reading 'titulo')
+[2023-12-08 22:45:59] error Cannot read properties of null (reading 'titulo')
+[2023-12-08 22:45:59] error Cannot read properties of null (reading 'titulo')
+[2023-12-08 22:45:59] error Cannot read properties of null (reading 'titulo')
+[2023-12-08 22:46:14] error Cannot read properties of null (reading 'titulo')
+[2023-12-08 22:47:06] error en product controller Cannot destructure property 'id' of 'req.params.id' as it is undefined.
+[2023-12-08 22:50:59] error en product controller id is not defined
+[2023-12-08 22:52:35] error en product controller id is not defined
+[2023-12-08 22:53:19] error en product controller Cannot read properties of undefined (reading 'getById')
+[2023-12-08 22:54:00] error en product controller Cannot read properties of undefined (reading 'getById')
+[2023-12-08 22:54:51] error en product controller Cannot read properties of undefined (reading 'getByIdDto')
+[2023-12-08 22:55:47] error Cannot read properties of null (reading 'titulo')
+[2023-12-08 22:56:00] error en product controller Cannot read properties of undefined (reading 'getByIdDto')
+[2023-12-08 22:56:54] error en product controller Cannot read properties of undefined (reading 'getByIdDto')
+[2023-12-08 22:57:31] error en product controller Cannot read properties of undefined (reading 'getByIdDto')
+[2023-12-08 22:58:20] error en product controller Cannot read properties of undefined (reading 'getByIdDto')
+[2023-12-08 22:59:22] error en product controller Cannot read properties of undefined (reading 'getByIdDto')
+[2023-12-08 23:00:32] error en product controller Cannot read properties of undefined (reading 'getByIdDto')
+[2023-12-08 23:01:27] error en product controller Cannot read properties of undefined (reading 'getByIdDto')
+[2023-12-08 23:03:10] error en product controller Cannot read properties of undefined (reading 'getByIdDto')
+[2023-12-08 23:03:49] error en product controller Cannot read properties of undefined (reading 'getByIdDto')
+[2023-12-08 23:04:00] error en product controller Cannot read properties of undefined (reading 'getByIdDto')
+[2023-12-08 23:05:07] error en product controller Cannot read properties of undefined (reading 'getByIdDto')
+[2023-12-08 23:05:43] error en product controller Cannot read properties of undefined (reading 'getByIdDto')

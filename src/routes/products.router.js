@@ -19,7 +19,8 @@ router
     controller.addProdToCart
   )
   /* Sólo el administrador puede crear, actualizar y eliminar productos */
-  .post("/", /* checkUserRole,  */controller.createProdDTO)
+  /* .post("/", */ /* checkUserRole,  *//* controller.createProd) */
+  .post("/", /* checkUserRole,  */controller.createProdDto)
   .put("/:pid", /* checkUserRole, */ controller.update)
 
   .delete("/:id", checkUserRole, controller.expunge)

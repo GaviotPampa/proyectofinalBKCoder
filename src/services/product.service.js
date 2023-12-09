@@ -23,13 +23,14 @@ export const getById = async (id) => {
     if (!item) return false;
     else return item;
   } catch (error) {
+    logger.error( "getById en product.service",error);
     throw new Error(error.message);
   }
 };
 
-export const getByIdDto = async (id) => {
+export const getByIdDto = async (pid) => {
   try {
-    const item = await prodDao.getByIdDto(id);
+    const item = await service.getByIdDto(pid);
     if (!item) return false;
     else return item;
   } catch (error) {
@@ -37,9 +38,9 @@ export const getByIdDto = async (id) => {
   }
 };
 
-/* export const createProd = async (obj) => {
+/* export const create = async (obj) => {
   try {
-    const newProduct = await prodDao.createProd(obj);
+    const newProduct = await service.create(obj);
     if (!newProduct) return false;
     else return newProduct;
   } catch (error) {
@@ -47,9 +48,9 @@ export const getByIdDto = async (id) => {
   }
 }; */
 
-export const createProd = async (obj) => {
+export const createProdDto = async (obj) => {
   try {
-    const newProduct = await service.createProd(obj);
+    const newProduct = await service.create(obj);
     if (!newProduct) return false;
     else return newProduct;
   } catch (error) {
@@ -57,10 +58,16 @@ export const createProd = async (obj) => {
   }
 };
 
-export const updateProd = async (id, obj) => {
+export const updateProd = async (pid, obj) => {
   try {
-    const item = await prodDao.updateProd(id, obj);
-    return item;
+    const item = await prodDao.getById(pid, obj);
+    if (!item) {
+      return false;
+    }else{
+      const itemUpdate = await prodDao.updateProd (pid,obj);
+      return itemUpdate;
+
+    }
   } catch (error) {
     throw new Error(error.message);
   }

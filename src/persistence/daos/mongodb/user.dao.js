@@ -85,7 +85,16 @@ export default class UserDao {
     }
   }
 
-/*   async getByIdDto(id) {
+  async gitHubResponse() {
+    try {
+      
+    } catch (error) {
+      throw new Error (error.message);
+      
+    }
+    
+  }
+  async getByIdDto(id) {
     try {
       const userExist = await UserModel.findById(
         id
@@ -95,7 +104,7 @@ export default class UserDao {
       logger.error("getByIdDto en user.dao", error);
       throw new Error(error.message);
     }
-  } */
+  }
 
   async getByEmail(email) {
     try {

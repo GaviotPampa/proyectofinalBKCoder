@@ -11,6 +11,7 @@ const router = Router();
 router
   .get("/", controller.getAll)
   .get("/:id", controller.getById)
+  .get ("/dtoUser/:id", controller.getByIdDto)
   .put("/:id", controller.update)
   .delete("/:id", controller.eliminate)
   .post("/register", controller.register)

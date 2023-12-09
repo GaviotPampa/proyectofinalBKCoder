@@ -1,6 +1,6 @@
 export default class ProdReqDto {
     constructor(product) {
-      this.titulo = product.titulo;
+      this.titulo = product.title;
   
        this.importe = product.price;
   
@@ -14,9 +14,6 @@ export default class ProdReqDto {
   
        this.codigo= product.code;
   
-       this.owner= product.owner;
-
-       this.thumbnails= product.thumbnails;
        
     };
   };

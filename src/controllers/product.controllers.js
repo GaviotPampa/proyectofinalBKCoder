@@ -44,99 +44,46 @@ export const getById = async (req, res, next) => {
   }
 };
 
-export const getByIdDto= async (req, res, next) => {
+export const getByIdDto = async (req, res, next) => {
   try {
     const prodId = req.params.pid;
     const product = await service.getByIdDto(prodId);
-    console.log(product)
+    console.log(product);
     if (!product)
-      return httpResponse.NotFound(
-        res,
-        "Product not found by pid " + id
-      );
+      return httpResponse.NotFound(res, "Product not found by pid " + id);
     else httpResponse.Ok(res, product);
   } catch (error) {
-    logger.error("Error en la busqueda de producto por ID en product.controller. " );
+    logger.error(
+      "Error en la busqueda de producto por ID en product.controller. "
+    );
     next(error.message);
   }
 };
-
-/* export const create = async (req, res, next) => {
+/* 
+export const createProd = async (req, res, next) => {
   try {
-    const { ...obj } = req.body;
-    if (
-      !obj.title ||
-      obj.title == undefined ||
-      obj.title == null ||
-      obj.title == ""
-    )
-      httpResponse.BadRequest(
-        res,
-        "Title are required, el campo titulo es obligatorio"
-      );
-    if (
-      !obj.description ||
-      obj.description == undefined ||
-      obj.description == null ||
-      obj.description == ""
-    )
-      httpResponse.BadRequest(res, "Description are required");
-    if (
-      !obj.price ||
-      obj.price == undefined ||
-      obj.price == null ||
-      obj.price == ""
-    )
-      httpResponse.BadRequest(res, "Price are required");
-    if (
-      !obj.stock ||
-      obj.stock == undefined ||
-      obj.stock == null ||
-      obj.stock == ""
-    )
-      httpResponse.BadRequest(res, "Stock are required");
-    if (
-      !obj.code ||
-      obj.code == undefined ||
-      obj.code == null ||
-      obj.code == ""
-    )
-      httpResponse.BadRequest(res, "Code are required");
-    if (
-      !obj.status ||
-      obj.status == undefined ||
-      obj.status == null ||
-      obj.status == ""
-    )
-      httpResponse.BadRequest(res, "Status are required");
-    if (
-      !obj.category ||
-      obj.category == undefined ||
-      obj.category == null ||
-      obj.category == ""
-    )
-      httpResponse.BadRequest(res, "Category are required");
-    const newProduct = await service.createServ(req.body);
+    
+    const newProduct = await service.create(req.body);
     logger.info(newProduct);
-    if (newProduct && obj.status === true) {
+    if (newProduct) {
       httpResponse.Ok(res, newProduct);
       logger.info("Product created successfully whit mongoose");
       return newProduct;
     } else { */
 /* res.status(404).json({ message: "Validation error" }); */
-/* httpResponse.BadRequest(res, "Validation error"); */
-/* res.status(200).json */
-/*    }
+/* httpResponse.BadRequest(res, "Validation error");
+res.status(200).json
+   }
   } catch (error) {
     logger.debug("Error creating product");
     next(error);
   }
 }; */
 
-export const createProdDTO = async (req, res,next) => {
+export const createProdDto = async (req, res, next) => {
   try {
-    const newProd = await service.createProd(req.body);
-    if(!newProd) return httpResponse.NotFound(res, httpResponse.NOT_FOUND);
+    const newProd = await service.createProdDto(req.body);
+    if (!newProd) return httpResponse.NotFound(res, httpResponse.NOT_FOUND);
     else return httpResponse.Ok(res, newProd);
   } catch (error) {
     logger.debug("Error creating product");
@@ -146,12 +93,15 @@ export const createProdDTO = async (req, res,next) => {
 
 export const update = async (req, res, next) => {
   try {
-    const { id } = req.params;
-    const prodUpd = await service.updateProd(id, req.body);
-    res.json(prodUpd);
-    if (!prodUpd) return httpResponse.NotFound(res, "ERROR_UPDATE");
+    const { pid } = req.params;
+    console.log("pid:",pid);
+    const prod = await service.getById(pid);
+    console.log("prod:",prod);
+    if (!prod) return httpResponse.NotFound(res, "ERROR_UPDATE");
+    const prodUpd = await service.updateProd(pid, req.body);
     return httpResponse.Ok(res, prodUpd);
   } catch (error) {
+    logger.error("en product controller", error);
     next(error.message);
   }
 };

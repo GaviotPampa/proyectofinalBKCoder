@@ -1,8 +1,8 @@
 import UserDao from "../persistence/daos/mongodb/user.dao.js";
 const userDao = new UserDao();
 import logger from "../middlewares/logger-mw.js";
-/* 
-import * as service from "../persistence/repositories/user/user.repository.js"; */
+
+import * as service from "../persistence/repositories/user/user.repository.js";
 
 export const getAll = async () => {
   try {
@@ -114,7 +114,7 @@ export const addCartToUser = async (userId, cartId) => {
   }
 };
 
-/* export const getByIdDto = async (id) => {
+export const getByIdDto = async (id) => {
   try {
     const user = await service.getByIdDto(id);
     if (!user) return false;
@@ -122,7 +122,7 @@ export const addCartToUser = async (userId, cartId) => {
   } catch (error) {
     logger.error(error);
   }
-}; */
+};
 
 export const resetPass = async (user) => {
   try {

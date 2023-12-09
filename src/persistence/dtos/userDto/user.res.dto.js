@@ -5,7 +5,7 @@
 No es necesario implementarlo en ambos lados, salvo que sea sumamente necesario.
  */
 
-/* export default class UserResDto {
+ export default class UserResDto {
   constructor(user) {
     this.nombre = user.first_name;
 
@@ -15,5 +15,4 @@ No es necesario implementarlo en ambos lados, salvo que sea sumamente necesario.
 
     this.rol = user.role;
   }
-}
- */
+} 

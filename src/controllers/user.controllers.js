@@ -34,7 +34,7 @@ export const getById = async (req, res, next) => {
   }
 };
 
-/* export const getByIdDto = async (req, res, next) => {
+export const getByIdDto = async (req, res, next) => {
   try {
     const uid = req.params.id;
     const user = await service.getByIdDto(uid);
@@ -45,7 +45,7 @@ export const getById = async (req, res, next) => {
     logger.error("error en getByIdDto en user.controller", error);
     next(error.message);
   }
-}; */
+};
 
 export const update = async (req, res, next) => {
   try {
