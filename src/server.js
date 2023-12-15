@@ -36,7 +36,7 @@ const app = express();
 
 //llamamos a swaggerJSDoc y le pasamos el objeto infoApi
 const specs = swaggerJSDoc(infoApi);
-app.use("/apidocs", swaggerUI.serve, swaggerUI.setup(specs));
+app.use("/apiDocs", swaggerUI.serve, swaggerUI.setup(specs));
 
 const cookieKey = config.SECRET_COOKIE_KEY;
 console.log("version Node: ", process.version);
@@ -61,7 +61,8 @@ app
   .set("views", __dirname + "/views");
 
 //inicializar passport antes de las rutas
-app.use(passport.initialize()).use(passport.session());
+app.use(passport.initialize())
+app.use(passport.session());
 
 /*** inicializar rutas con prefijos***/
 

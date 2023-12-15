@@ -100,7 +100,7 @@ export default class ProdDaoMDB {
     }
   }
 
-  async addProdToCart(productId, cartId, quantity) {
+  async addProdToCart(userId, productId, cartId, quantity) {
     try {
       const cart = await CartModel.findById(cartId);
       if (!cart) return false;

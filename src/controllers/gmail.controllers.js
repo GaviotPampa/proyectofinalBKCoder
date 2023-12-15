@@ -48,6 +48,8 @@ export const sendMail = async (user, service, token = null) => {
       ? (msg = createMsgRegister(first_name))
       : service === "resetPass"
       ? (msg = createMsgReset(first_name))
+      : service === "lastLogin"
+      ? (msg = createMsgLastLogin(first_name))
       : (msg = "contenido del correo electrónico");
 
     let subj = "";
@@ -56,6 +58,8 @@ export const sendMail = async (user, service, token = null) => {
         ? `Bienvenido:  ${first_name} `
         : service === "resetPass"
         ? "Restablecimiento de contraseña"
+        : service === "lastLogin"
+        ? "Usuario eliminado por inactivo"
         : "";
 
     const gmailOptions = {

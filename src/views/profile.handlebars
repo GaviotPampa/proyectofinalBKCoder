@@ -1,19 +1,18 @@
 <div class="contenedor-profile">
-  <h1 class="profile">Profile </h1>
+  <h1 class="profile">Profile {{user.first_name}} {{user.last_name}} </h1>
   <div>
-    <img src="/uploads/profiles" alt="">
+    <img src="{{!-- /uploads/profiles --}}{{user.image}}" alt="user image profile" style="width: 40%; border: 1px solid black;"/>
   </div>
 
   {{#if user}}
-    {{#each user}}
-      <h2 class="profile">Hello </h2>
-      <p class="profile"> Nombre: {{this.first_name}}</p>
-      <p class="profile">role: {{this.role}}</p>
-    {{/each}}
+    <div>
+      <p class="profile">role: {{user.role}}</p>
+    </div>
   {{else}}
-    <h1 class="profile">Hello {{this.first_name}}</h1>
-    <p class="profile">There are nothing yet.</p>
-
+    <div>
+      <h1 class="profile">Hello {{user.first_name}}</h1>
+      <p class="profile">There are nothing yet.</p>
+    </div>
   {{/if}}
   <div class="register">
     <button

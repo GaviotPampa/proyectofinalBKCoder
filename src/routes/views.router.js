@@ -4,13 +4,13 @@ router de vistas en la ruta base / para llevar al formulario de login, de regist
 import { Router } from "express";
 const router = Router();
 
-import * as controller from "../controllers/views.controllers.js";
+/* import * as controller from "../controllers/views.controllers.js"; */
 
 router
   .get("/home", (req, res) => {
     res.render("home");
   })
-  .get("/login", (req, res) => {
+  .get("/login", async (req, res) => {
     res.render("login");
   })
   .get("/register", (req, res) => {
@@ -18,12 +18,20 @@ router
   })
 
   .get("/profile", (req, res) => {
-    res.render("profile");
+    console.log("profile views router", req.user);
+    const user = req.user;
+    res.render("profile", { user });
   })
-  .get("/error-login", controller.errorLogin)
-  .get("/error-register", controller.errorRegister)
+  .get("/error-login", (req, res) => {
+    res.render("error-login");
+  })
+  .get("/error-register", (req, res) => {
+    res.render("error-register");
+  })
 
-  .get("/reset-pass", controller.resetPass)
+  .get("/reset-pass", (req, res) => {
+    res.render("reset-pass");
+  })
   /*  .get("/products", controller.products) */
   /* router.get("/:id", cartId); */
   .get("/products", (req, res) => {
@@ -34,6 +42,9 @@ router
   })
   .post("/login", (req, res) => {
     res.render("login");
+  })
+  .get("/isAdmin", (req, res) => {
+    res.render("isAdmin");
   });
 
 export default router;

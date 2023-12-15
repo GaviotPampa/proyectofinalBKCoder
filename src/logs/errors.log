@@ -511,3 +511,230 @@
 [2023-12-08 23:04:00] error en product controller Cannot read properties of undefined (reading 'getByIdDto')
 [2023-12-08 23:05:07] error en product controller Cannot read properties of undefined (reading 'getByIdDto')
 [2023-12-08 23:05:43] error en product controller Cannot read properties of undefined (reading 'getByIdDto')
+[2023-12-09 16:07:22] error getById en user.dao Cast to ObjectId failed for value "register-github" (type string) at path "_id" for model "users"
+[2023-12-09 16:07:22] error getById en user.service Cast to ObjectId failed for value "register-github" (type string) at path "_id" for model "users"
+[2023-12-09 16:26:45] error getById en user.dao Cast to ObjectId failed for value "register-github" (type string) at path "_id" for model "users"
+[2023-12-09 16:26:45] error getById en user.service Cast to ObjectId failed for value "register-github" (type string) at path "_id" for model "users"
+[2023-12-09 16:27:05] error getById en user.dao Cast to ObjectId failed for value "register-github" (type string) at path "_id" for model "users"
+[2023-12-09 16:27:05] error getById en user.service Cast to ObjectId failed for value "register-github" (type string) at path "_id" for model "users"
+[2023-12-09 16:36:21] error getById en user.dao Cast to ObjectId failed for value "register-github" (type string) at path "_id" for model "users"
+[2023-12-09 16:36:21] error getById en user.service Cast to ObjectId failed for value "register-github" (type string) at path "_id" for model "users"
+[2023-12-09 16:36:23] error getById en user.dao Cast to ObjectId failed for value "register-hithub" (type string) at path "_id" for model "users"
+[2023-12-09 16:36:23] error getById en user.service Cast to ObjectId failed for value "register-hithub" (type string) at path "_id" for model "users"
+[2023-12-09 16:36:41] error getById en user.dao Cast to ObjectId failed for value "register-github" (type string) at path "_id" for model "users"
+[2023-12-09 16:36:41] error getById en user.service Cast to ObjectId failed for value "register-github" (type string) at path "_id" for model "users"
+[2023-12-09 16:44:27] error getById en user.dao Cast to ObjectId failed for value "register-github" (type string) at path "_id" for model "users"
+[2023-12-09 16:44:27] error getById en user.service Cast to ObjectId failed for value "register-github" (type string) at path "_id" for model "users"
+[2023-12-09 16:59:32] error getById en user.dao Cast to ObjectId failed for value "register-github" (type string) at path "_id" for model "users"
+[2023-12-09 16:59:32] error getById en user.service Cast to ObjectId failed for value "register-github" (type string) at path "_id" for model "users"
+[2023-12-09 17:01:09] error getById en user.dao Cast to ObjectId failed for value "{ _id: 'register-github' }" (type Object) at path "_id" for model "users"
+[2023-12-09 17:01:09] error getById en user.service Cast to ObjectId failed for value "{ _id: 'register-github' }" (type Object) at path "_id" for model "users"
+[2023-12-09 17:04:51] error getById en user.dao Cast to ObjectId failed for value "register-github" (type string) at path "_id" for model "users"
+[2023-12-09 17:04:51] error getById en user.service Cast to ObjectId failed for value "register-github" (type string) at path "_id" for model "users"
+[2023-12-09 18:32:30] error getById en user.dao Cast to ObjectId failed for value "githubcallback" (type string) at path "_id" for model "users"
+[2023-12-09 18:32:30] error getById en user.service Cast to ObjectId failed for value "githubcallback" (type string) at path "_id" for model "users"
+[2023-12-09 18:35:01] error getById en user.dao Cast to ObjectId failed for value "register-github" (type string) at path "_id" for model "users"
+[2023-12-09 18:35:01] error getById en user.service Cast to ObjectId failed for value "register-github" (type string) at path "_id" for model "users"
+[2023-12-09 18:35:02] error getById en user.dao Cast to ObjectId failed for value "register-github" (type string) at path "_id" for model "users"
+[2023-12-09 18:35:02] error getById en user.service Cast to ObjectId failed for value "register-github" (type string) at path "_id" for model "users"
+[2023-12-09 18:49:11] error getById en user.dao Cast to ObjectId failed for value "register-github" (type string) at path "_id" for model "users"
+[2023-12-09 18:49:11] error getById en user.service Cast to ObjectId failed for value "register-github" (type string) at path "_id" for model "users"
+[2023-12-09 18:58:51] error getById en user.dao req is not defined
+[2023-12-09 18:58:51] error getById en user.service req is not defined
+[2023-12-09 19:02:37] error getById en user.dao Cast to ObjectId failed for value "register-github" (type string) at path "_id" for model "users"
+[2023-12-09 19:02:37] error getById en user.service Cast to ObjectId failed for value "register-github" (type string) at path "_id" for model "users"
+[2023-12-09 19:10:11] error getById en user.dao Cast to ObjectId failed for value "register-github" (type string) at path "_id" for model "users"
+[2023-12-09 19:10:11] error getById en user.service Cast to ObjectId failed for value "register-github" (type string) at path "_id" for model "users"
+[2023-12-09 19:10:44] error getById en user.dao Cast to ObjectId failed for value "register-github" (type string) at path "_id" for model "users"
+[2023-12-09 19:10:44] error getById en user.service Cast to ObjectId failed for value "register-github" (type string) at path "_id" for model "users"
+[2023-12-09 19:10:45] error getById en user.dao Cast to ObjectId failed for value "register-github" (type string) at path "_id" for model "users"
+[2023-12-09 19:10:45] error getById en user.service Cast to ObjectId failed for value "register-github" (type string) at path "_id" for model "users"
+[2023-12-09 19:12:59] error getById en user.dao Cast to ObjectId failed for value "register-github" (type string) at path "_id" for model "users"
+[2023-12-09 19:12:59] error getById en user.service Cast to ObjectId failed for value "register-github" (type string) at path "_id" for model "users"
+[2023-12-09 19:21:06] error getById en user.dao Cast to ObjectId failed for value "register-github" (type string) at path "_id" for model "users"
+[2023-12-09 19:21:06] error getById en user.service Cast to ObjectId failed for value "register-github" (type string) at path "_id" for model "users"
+[2023-12-09 19:23:32] error getById en user.dao Cast to ObjectId failed for value "register-github" (type string) at path "_id" for model "users"
+[2023-12-09 19:23:32] error getById en user.service Cast to ObjectId failed for value "register-github" (type string) at path "_id" for model "users"
+[2023-12-09 19:23:32] error getById en user.dao Cast to ObjectId failed for value "register-github" (type string) at path "_id" for model "users"
+[2023-12-09 19:23:32] error getById en user.service Cast to ObjectId failed for value "register-github" (type string) at path "_id" for model "users"
+[2023-12-09 20:57:14] error error en login user.dao Parameter "filter" to findOne() must be an object, got "" (type string)
+[2023-12-09 20:57:32] error error en login user.dao Parameter "filter" to findOne() must be an object, got "gaviclcarrizo@gmail.com" (type string)
+[2023-12-09 20:58:00] error error en login user.dao Parameter "filter" to findOne() must be an object, got "gaviclcarrizo@gmail.com" (type string)
+[2023-12-09 21:00:00] error error en login user.dao Parameter "filter" to findOne() must be an object, got "gaviclcarrizo@gmail.com" (type string)
+[2023-12-09 21:03:56] error error en login user.dao Parameter "filter" to findOne() must be an object, got "gaviclcarrizo@gmail.com" (type string)
+[2023-12-09 21:06:25] error getById en user.dao Cast to ObjectId failed for value "register-github" (type string) at path "_id" for model "users"
+[2023-12-09 21:06:25] error getById en user.service Cast to ObjectId failed for value "register-github" (type string) at path "_id" for model "users"
+[2023-12-09 21:06:26] error getById en user.dao Cast to ObjectId failed for value "register-github" (type string) at path "_id" for model "users"
+[2023-12-09 21:06:26] error getById en user.service Cast to ObjectId failed for value "register-github" (type string) at path "_id" for model "users"
+[2023-12-09 21:08:13] error getById en user.dao Cast to ObjectId failed for value "{ _id: 'register-github' }" (type Object) at path "_id" for model "users"
+[2023-12-09 21:08:13] error getById en user.service Cast to ObjectId failed for value "{ _id: 'register-github' }" (type Object) at path "_id" for model "users"
+[2023-12-09 21:38:32] error getById en user.dao Cast to ObjectId failed for value "{ _id: 'register-github' }" (type Object) at path "_id" for model "users"
+[2023-12-09 21:38:32] error getById en user.service Cast to ObjectId failed for value "{ _id: 'register-github' }" (type Object) at path "_id" for model "users"
+[2023-12-09 21:38:33] error getById en user.dao Cast to ObjectId failed for value "{ _id: 'register-github' }" (type Object) at path "_id" for model "users"
+[2023-12-09 21:38:33] error getById en user.service Cast to ObjectId failed for value "{ _id: 'register-github' }" (type Object) at path "_id" for model "users"
+[2023-12-09 21:52:26] error getById en user.dao Cast to ObjectId failed for value "{ _id: 'register-github' }" (type Object) at path "_id" for model "users"
+[2023-12-09 21:52:26] error getById en user.service Cast to ObjectId failed for value "{ _id: 'register-github' }" (type Object) at path "_id" for model "users"
+[2023-12-09 21:52:27] error getById en user.dao Cast to ObjectId failed for value "{ _id: 'register-github' }" (type Object) at path "_id" for model "users"
+[2023-12-09 21:52:27] error getById en user.service Cast to ObjectId failed for value "{ _id: 'register-github' }" (type Object) at path "_id" for model "users"
+[2023-12-09 21:56:25] error getById en user.dao Cast to ObjectId failed for value "{ _id: 'register-github' }" (type Object) at path "_id" for model "users"
+[2023-12-09 21:56:25] error getById en user.service Cast to ObjectId failed for value "{ _id: 'register-github' }" (type Object) at path "_id" for model "users"
+[2023-12-09 21:56:26] error getById en user.dao Cast to ObjectId failed for value "{ _id: 'register-github' }" (type Object) at path "_id" for model "users"
+[2023-12-09 21:56:26] error getById en user.service Cast to ObjectId failed for value "{ _id: 'register-github' }" (type Object) at path "_id" for model "users"
+[2023-12-11 17:55:42] error getById en user.dao Cast to ObjectId failed for value "{ _id: 'register-github' }" (type Object) at path "_id" for model "users"
+[2023-12-11 17:55:42] error getById en user.service Cast to ObjectId failed for value "{ _id: 'register-github' }" (type Object) at path "_id" for model "users"
+[2023-12-11 17:55:43] error getById en user.dao Cast to ObjectId failed for value "{ _id: 'register-github' }" (type Object) at path "_id" for model "users"
+[2023-12-11 17:55:43] error getById en user.service Cast to ObjectId failed for value "{ _id: 'register-github' }" (type Object) at path "_id" for model "users"
+[2023-12-11 17:59:38] error getById en user.dao Cast to ObjectId failed for value "register-github" (type string) at path "_id" for model "users"
+[2023-12-11 17:59:38] error getById en user.service Cast to ObjectId failed for value "register-github" (type string) at path "_id" for model "users"
+[2023-12-11 18:02:57] error getById en user.dao Cast to ObjectId failed for value "register-github" (type string) at path "_id" for model "users"
+[2023-12-11 18:02:57] error getById en user.service Cast to ObjectId failed for value "register-github" (type string) at path "_id" for model "users"
+[2023-12-11 18:08:27] error getById en user.dao req is not defined
+[2023-12-11 18:08:27] error getById en user.service req is not defined
+[2023-12-11 18:08:35] error getById en user.dao req is not defined
+[2023-12-11 18:08:35] error getById en user.service req is not defined
+[2023-12-11 18:10:44] error error en getById user.controller isValidObjectId is not defined
+[2023-12-11 18:12:16] error error en getById user.controller isObjectId is not defined
+[2023-12-11 18:12:53] error error en getById user.controller ObjectId is not defined
+[2023-12-11 18:15:12] error error en getById user.controller ObjectId.IsValid is not a function
+[2023-12-11 19:31:08] error en el register user.dao Parameter "filter" to findOne() must be an object, got "" (type string)
+[2023-12-11 19:31:08] error ObjectParameterError: Parameter "filter" to findOne() must be an object, got "" (type string)
+[2023-12-11 19:47:08] error en el register user.dao Parameter "filter" to findOne() must be an object, got "" (type string)
+[2023-12-11 19:47:08] error ObjectParameterError: Parameter "filter" to findOne() must be an object, got "" (type string)
+[2023-12-11 19:47:17] error en el register user.dao Parameter "filter" to findOne() must be an object, got "" (type string)
+[2023-12-11 19:47:17] error ObjectParameterError: Parameter "filter" to findOne() must be an object, got "" (type string)
+[2023-12-11 19:48:51] error en el register user.dao users validation failed: first_name: Path `first_name` is required., last_name: Path `last_name` is required., email: Path `email` is required., age: Path `age` is required.
+[2023-12-11 19:48:51] error ValidationError: first_name: Path `first_name` is required., last_name: Path `last_name` is required., email: Path `email` is required., age: Path `age` is required.
+[2023-12-11 19:49:58] error error en login user.dao Parameter "filter" to findOne() must be an object, got "jose@mail.com" (type string)
+[2023-12-11 19:50:20] error error en login user.dao Parameter "filter" to findOne() must be an object, got "jose@mail.com" (type string)
+[2023-12-11 19:50:40] error en el register user.dao users validation failed: first_name: Path `first_name` is required., last_name: Path `last_name` is required., email: Path `email` is required., age: Path `age` is required.
+[2023-12-11 19:50:40] error ValidationError: first_name: Path `first_name` is required., last_name: Path `last_name` is required., email: Path `email` is required., age: Path `age` is required.
+[2023-12-11 19:52:15] error en el register user.dao users validation failed: first_name: Path `first_name` is required., last_name: Path `last_name` is required., email: Path `email` is required., age: Path `age` is required.
+[2023-12-11 19:52:15] error ValidationError: first_name: Path `first_name` is required., last_name: Path `last_name` is required., email: Path `email` is required., age: Path `age` is required.
+[2023-12-11 19:57:00] error error en login user.dao Parameter "filter" to findOne() must be an object, got "" (type string)
+[2023-12-11 19:57:04] error error en login user.dao Parameter "filter" to findOne() must be an object, got "" (type string)
+[2023-12-11 19:58:34] error error en login user.dao Parameter "filter" to findOne() must be an object, got "" (type string)
+[2023-12-11 20:08:17] error getById en user.dao Cast to ObjectId failed for value "github" (type string) at path "_id" for model "users"
+[2023-12-11 20:08:17] error getById en user.service Cast to ObjectId failed for value "github" (type string) at path "_id" for model "users"
+[2023-12-11 20:29:55] error getById en user.dao Cast to ObjectId failed for value "github" (type string) at path "_id" for model "users"
+[2023-12-11 20:29:55] error getById en user.service Cast to ObjectId failed for value "github" (type string) at path "_id" for model "users"
+[2023-12-11 20:32:11] error getById en user.dao Cast to ObjectId failed for value "github" (type string) at path "_id" for model "users"
+[2023-12-11 20:32:11] error getById en user.service Cast to ObjectId failed for value "github" (type string) at path "_id" for model "users"
+[2023-12-11 20:32:56] error getById en user.dao Cast to ObjectId failed for value "github" (type string) at path "_id" for model "users"
+[2023-12-11 20:32:56] error getById en user.service Cast to ObjectId failed for value "github" (type string) at path "_id" for model "users"
+[2023-12-11 20:33:01] error getById en user.dao Cast to ObjectId failed for value "github" (type string) at path "_id" for model "users"
+[2023-12-11 20:33:01] error getById en user.service Cast to ObjectId failed for value "github" (type string) at path "_id" for model "users"
+[2023-12-11 21:38:10] error getById en user.dao Cast to ObjectId failed for value "register-github" (type string) at path "_id" for model "users"
+[2023-12-11 21:38:10] error getById en user.service Cast to ObjectId failed for value "register-github" (type string) at path "_id" for model "users"
+[2023-12-11 21:38:11] error getById en user.dao Cast to ObjectId failed for value "register-github" (type string) at path "_id" for model "users"
+[2023-12-11 21:38:11] error getById en user.service Cast to ObjectId failed for value "register-github" (type string) at path "_id" for model "users"
+[2023-12-11 21:40:51] error getById en user.dao Cast to ObjectId failed for value "register-github" (type string) at path "_id" for model "users"
+[2023-12-11 21:40:51] error getById en user.service Cast to ObjectId failed for value "register-github" (type string) at path "_id" for model "users"
+[2023-12-11 21:41:22] error getById en user.dao Cast to ObjectId failed for value "register-github" (type string) at path "_id" for model "users"
+[2023-12-11 21:41:22] error getById en user.service Cast to ObjectId failed for value "register-github" (type string) at path "_id" for model "users"
+[2023-12-11 21:43:30] error getById en user.dao Cast to ObjectId failed for value "register-github" (type string) at path "_id" for model "users"
+[2023-12-11 21:43:30] error getById en user.service Cast to ObjectId failed for value "register-github" (type string) at path "_id" for model "users"
+[2023-12-11 21:44:23] error getById en user.dao Cast to ObjectId failed for value "register-github" (type string) at path "_id" for model "users"
+[2023-12-11 21:44:23] error getById en user.service Cast to ObjectId failed for value "register-github" (type string) at path "_id" for model "users"
+[2023-12-11 21:47:16] error getById en user.dao Cast to ObjectId failed for value "register-github" (type string) at path "_id" for model "users"
+[2023-12-11 21:47:16] error getById en user.service Cast to ObjectId failed for value "register-github" (type string) at path "_id" for model "users"
+[2023-12-11 21:48:12] error error en getById user.controller service.getById is not a function
+[2023-12-11 22:49:23] error en el register user.dao users validation failed: first_name: Path `first_name` is required., last_name: Path `last_name` is required., email: Path `email` is required., age: Path `age` is required.
+[2023-12-11 22:49:23] error ValidationError: first_name: Path `first_name` is required., last_name: Path `last_name` is required., email: Path `email` is required., age: Path `age` is required.
+[2023-12-11 22:49:56] error en el register user.dao users validation failed: first_name: Path `first_name` is required., last_name: Path `last_name` is required., email: Path `email` is required., age: Path `age` is required.
+[2023-12-11 22:49:56] error ValidationError: first_name: Path `first_name` is required., last_name: Path `last_name` is required., email: Path `email` is required., age: Path `age` is required.
+[2023-12-12 01:01:47] error en el register user.dao users validation failed: first_name: Path `first_name` is required., last_name: Path `last_name` is required., email: Path `email` is required., age: Path `age` is required.
+[2023-12-12 01:01:47] error ValidationError: first_name: Path `first_name` is required., last_name: Path `last_name` is required., email: Path `email` is required., age: Path `age` is required.
+[2023-12-12 01:02:06] error en el register user.dao users validation failed: first_name: Path `first_name` is required., last_name: Path `last_name` is required., email: Path `email` is required., age: Path `age` is required.
+[2023-12-12 01:02:06] error ValidationError: first_name: Path `first_name` is required., last_name: Path `last_name` is required., email: Path `email` is required., age: Path `age` is required.
+[2023-12-13 19:07:26] error Cannot access 'user' before initialization
+[2023-12-13 19:18:25] error Cannot access 'user' before initialization
+[2023-12-13 19:18:50] error Cannot access 'user' before initialization
+[2023-12-13 19:20:43] error Cannot access 'user' before initialization
+[2023-12-13 19:37:09] error TypeError: Cannot read properties of null (reading 'first_name')
+[2023-12-14 19:30:18] error error en getById user.controller ObjectId is not defined
+[2023-12-14 19:31:02] error error en getById user.controller service.getById is not a function
+[2023-12-14 19:37:05] error error en login user.dao data must be a string or Buffer and hash must be a string
+[2023-12-14 20:02:11] error getById en user.dao Cast to ObjectId failed for value "register-github" (type string) at path "_id" for model "users"
+[2023-12-14 20:02:11] error getById en user.service Cast to ObjectId failed for value "register-github" (type string) at path "_id" for model "users"
+[2023-12-14 20:20:31] error getById en user.dao Cast to ObjectId failed for value "{ _id: 'register-github' }" (type Object) at path "_id" for model "users"
+[2023-12-14 20:20:31] error getById en user.service Cast to ObjectId failed for value "{ _id: 'register-github' }" (type Object) at path "_id" for model "users"
+[2023-12-14 20:30:02] error error en getById user.controller input must be a 24 character hex string, 12 byte Uint8Array, or an integer
+[2023-12-14 22:06:05] error error en getById user.controller input must be a 24 character hex string, 12 byte Uint8Array, or an integer
+[2023-12-14 22:08:59] error getById en user.dao Cast to ObjectId failed for value "register-github" (type string) at path "_id" for model "users"
+[2023-12-14 22:08:59] error getById en user.service Cast to ObjectId failed for value "register-github" (type string) at path "_id" for model "users"
+[2023-12-14 22:10:36] error getById en user.dao Cast to ObjectId failed for value "register-github" (type string) at path "_id" for model "users"
+[2023-12-14 22:10:36] error getById en user.service Cast to ObjectId failed for value "register-github" (type string) at path "_id" for model "users"
+[2023-12-14 22:12:07] error getById en user.dao Cast to ObjectId failed for value "{ _id: undefined }" (type Object) at path "_id" for model "users"
+[2023-12-14 22:12:07] error getById en user.service Cast to ObjectId failed for value "{ _id: undefined }" (type Object) at path "_id" for model "users"
+[2023-12-14 22:14:11] error getById en user.dao Cast to ObjectId failed for value "{ _id: undefined }" (type Object) at path "_id" for model "users"
+[2023-12-14 22:14:11] error getById en user.service Cast to ObjectId failed for value "{ _id: undefined }" (type Object) at path "_id" for model "users"
+[2023-12-14 22:16:10] error error en getById user.controller ObjectId is not defined
+[2023-12-14 22:16:37] error error en getById user.controller Class constructor ObjectId cannot be invoked without 'new'
+[2023-12-14 23:18:16] error undefined
+[2023-12-14 23:59:29] error undefined
+[2023-12-15 00:31:02] error error en Github.strategy: result is not defined
+[2023-12-15 00:51:11] error error en Github.strategy: split is not defined
+[2023-12-15 01:17:41] error error en Github.strategy: Assignment to constant variable.
+[2023-12-15 01:18:39] error error en Github.strategy: first_name is not defined
+[2023-12-15 01:19:32] error error en Github.strategy: parts.slice(...).join is not a function
+[2023-12-15 01:19:56] error error en Github.strategy: profile._json.name.slice(...).join is not a function
+[2023-12-15 01:35:29] error getById en user.dao Cast to ObjectId failed for value "register-github" (type string) at path "_id" for model "users"
+[2023-12-15 01:35:29] error getById en user.service Cast to ObjectId failed for value "register-github" (type string) at path "_id" for model "users"
+[2023-12-15 01:37:33] error getById en user.service userDao.getById is not a function
+[2023-12-15 01:37:37] error getById en user.service userDao.getById is not a function
+[2023-12-15 01:38:38] error error en getById user.controller service.getById is not a function
+[2023-12-15 01:39:57] error getById en user.service userDao.getById is not a function
+[2023-12-15 01:40:23] error error en getById user.controller service.getById is not a function
+[2023-12-15 08:19:07] error Cannot access 'user' before initialization
+[2023-12-15 08:19:15] error Cannot access 'user' before initialization
+[2023-12-15 08:22:11] error userDao.findById is not a function
+[2023-12-15 08:23:15] error userDao.findById is not a function
+[2023-12-15 08:26:28] error userDao.findById is not a function
+[2023-12-15 08:26:53] error userDao.findById is not a function
+[2023-12-15 08:26:57] error userDao.findById is not a function
+[2023-12-15 08:29:19] error userDao.findById is not a function
+[2023-12-15 08:38:10] error userDao.findById is not a function
+[2023-12-15 08:38:46] error userDao.findById is not a function
+[2023-12-15 08:39:22] error userDao.findById is not a function
+[2023-12-15 08:43:29] error userDao.findById is not a function
+[2023-12-15 08:44:41] error userDao.findById is not a function
+[2023-12-15 08:46:43] error getById en user.dao Parameter "filter" to findOne() must be an object, got "657a316ce84894f13ddff8be" (type string)
+[2023-12-15 17:43:35] error error is not defined
+[2023-12-15 17:44:04] error error is not defined
+[2023-12-15 17:44:05] error error is not defined
+[2023-12-15 17:44:05] error error is not defined
+[2023-12-15 17:44:05] error error is not defined
+[2023-12-15 17:45:40] error error is not defined
+[2023-12-15 17:47:23] error error is not defined
+[2023-12-15 17:48:53] error error is not defined
+[2023-12-15 17:51:22] error error is not defined
+[2023-12-15 17:51:24] error error is not defined
+[2023-12-15 17:52:32] error error is not defined
+[2023-12-15 17:54:41] error error is not defined
+[2023-12-15 17:55:49] error error is not defined
+[2023-12-15 17:56:25] error error is not defined
+[2023-12-15 17:57:36] error error is not defined
+[2023-12-15 17:58:56] error error is not defined
+[2023-12-15 18:00:11] error error is not defined
+[2023-12-15 18:00:28] error error is not defined
+[2023-12-15 18:02:26] error error is not defined
+[2023-12-15 18:39:47] error error is not defined
+[2023-12-15 18:42:02] error error is not defined
+[2023-12-15 18:44:11] error error is not defined
+[2023-12-15 18:45:38] error error is not defined
+[2023-12-15 18:47:11] error error is not defined
+[2023-12-15 18:48:24] error error is not defined
+[2023-12-15 18:49:35] error en user service de addProdToUserCart Cannot destructure property '_id' of 'req.user' as it is undefined.
+[2023-12-15 18:51:09] error en user service de addProdToUserCart Cannot destructure property '_id' of 'req.user' as it is undefined.
+[2023-12-15 18:51:37] error en user service de addProdToUserCart Cannot destructure property '_id' of 'req.user' as it is undefined.
+[2023-12-15 18:52:53] error en user service de addProdToUserCart Cannot destructure property '_id' of 'req.user' as it is undefined.
+[2023-12-15 18:52:56] error en user service de addProdToUserCart Cannot destructure property '_id' of 'req.user' as it is undefined.
+[2023-12-15 18:52:57] error en user service de addProdToUserCart Cannot destructure property '_id' of 'req.user' as it is undefined.
+[2023-12-15 18:52:57] error en user service de addProdToUserCart Cannot destructure property '_id' of 'req.user' as it is undefined.
+[2023-12-15 18:52:57] error en user service de addProdToUserCart Cannot destructure property '_id' of 'req.user' as it is undefined.
+[2023-12-15 18:52:57] error en user service de addProdToUserCart Cannot destructure property '_id' of 'req.user' as it is undefined.
+[2023-12-15 18:52:57] error en user service de addProdToUserCart Cannot destructure property '_id' of 'req.user' as it is undefined.
+[2023-12-15 18:52:57] error en user service de addProdToUserCart Cannot destructure property '_id' of 'req.user' as it is undefined.
+[2023-12-15 18:52:58] error en user service de addProdToUserCart Cannot destructure property '_id' of 'req.user' as it is undefined.
+[2023-12-15 18:52:58] error en user service de addProdToUserCart Cannot destructure property '_id' of 'req.user' as it is undefined.
+[2023-12-15 18:55:07] error error is not defined

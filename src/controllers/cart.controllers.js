@@ -1,14 +1,14 @@
 import * as service from "../services/cart.service.js";
-import  logger  from "../middlewares/logger-mw.js";
+import logger from "../middlewares/logger-mw.js";
+import { ProductModel } from "../persistence/daos/mongodb/models/product.model.js";
 
 export const getAll = async (req, res, next) => {
   try {
     const cart = await service.getAll();
     if (cart) {
       res.status(200).json(cart);
-
-    }else {
-      res.json ({message: "Cart not found"})
+    } else {
+      res.json({ message: "Cart not found" });
     }
   } catch (error) {
     next(error.message);
@@ -18,8 +18,9 @@ export const getAll = async (req, res, next) => {
 export const getById = async (req, res, next) => {
   try {
     const { pid } = req.params;
-    const productInCart = await service.getById({_id: pid});
-    if (!productInCart) res.status(404).json({ message: "Product not found in Cart" });
+    const productInCart = await service.getById(pid);
+    if (!productInCart)
+      res.status(404).json({ message: "Product not found in Cart" });
     else res.status(200).json(productInCart);
   } catch (error) {
     next(error.message);
@@ -42,7 +43,7 @@ export const create = async (req, res, next) => {
 export const update = async (req, res, next) => {
   try {
     const { id } = req.params;
-    const prodUpd = await service.updatedCartServ({_id: id}, req.body);
+    const prodUpd = await service.updatedCartServ(id, req.body);
     res.json(prodUpd);
   } catch (error) {
     next(error.message);
@@ -51,14 +52,14 @@ export const update = async (req, res, next) => {
 
 export const addCartToUser = async (req, res, next) => {
   try {
-    const {cartId} = req.params;
-    const {idUser} = req.params;
+    const { cartId } = req.params;
+    const { idUser } = req.params;
     const youCart = await service.addCartToUser(idUser, cartId);
     res.json(youCart);
   } catch (error) {
-    next (error.message);
+    next(error.message);
   }
-}
+};
 export const expunge = async (req, res, next) => {
   try {
     const { id } = req.params;
@@ -69,38 +70,38 @@ export const expunge = async (req, res, next) => {
   }
 };
 export const removeItem = async (req, res, next) => {
-    try {
-      const { pid } = req.params;
-      const prodRemove = await service.removeProdToCart({_id: pid});
-      if (prodRemove){
-        res.json({
-          status: true,
-          message: 'Producto eliminado!'
-      })
-      } else {
-        res.json({
-          status: false,
-          message: 'No se puede eliminar'
-      })
-      }
-    } catch (error) {
-      next(error.message);
+  try {
+    const { pid } = req.params;
+    const prodRemove = await service.removeProdToCart(pid);
+    if (prodRemove) {
+      res.json({
+        status: true,
+        message: "Producto eliminado!",
+      });
+    } else {
+      res.json({
+        status: false,
+        message: "No se puede eliminar",
+      });
     }
-  };
-
-  export const compararStock = async (req,res,next)=> {
-    try {
-      const {cartId, quantity} = req.params;
-      for (let i = 0; i < cartId.length; i++) {
-        const item = cartId[i];
-        const stock = quantity[item.id].stock;
-        if (item.quantity > stock) {
-          return false;
-        }
-      }
-      return true;
-    } catch (error) {
-      logger.error(error);
-    }
-    
+  } catch (error) {
+    next(error.message);
   }
+};
+
+
+export const compararStock = async (req, res, next) => {
+  try {
+    const { cartId, quantity } = req.params;
+    for (let i = 0; i < cartId.length; i++) {
+      const item = cartId[i];
+      const stock = quantity[item.id].stock;
+      if (item.quantity > stock) {
+        return false;
+      }
+    }
+    return true;
+  } catch (error) {
+    logger.error(error);
+  }
+};

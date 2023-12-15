@@ -12,7 +12,7 @@ export default class CartDaoMDB {
 
   async getById(pid) {
     try {
-      const response = await CartModel.findById({pid}).populate("products");
+      const response = await CartModel.findById(pid).populate("products");
       return response;
     } catch (error) {
       console.log(error);
@@ -50,7 +50,7 @@ export default class CartDaoMDB {
 
   async removeProd(pid) {
     try {
-      const response = await CartModel.findByIdAndRemove({_id: pid});
+      const response = await CartModel.findByIdAndRemove( pid);
       console.log(response);
       return response;
     } catch (error) {

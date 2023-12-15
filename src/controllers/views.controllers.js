@@ -8,6 +8,7 @@ export const register = (req, res) => {
   logger.info("Controller views register:", register);
 };
 
+
 export const errorRegister = (req, res) => {
   res.render("errorRegister");
 };
@@ -17,14 +18,19 @@ export const login = (req, res) => {
   res.render("login");
 };
 
+export const githubLogin = (req, res) => {
+  res.render("register-github");
+};
+
 export const errorLogin = (req, res) => {
   res.render("errorLogin");
 };
 
 export const profile = (req, res) => {
-  console.log("render profile views.controller", req.body);
+
   const user = req.user?.toObject();
-  res.render("profile", user);
+    console.log("render profile views.controller", req.user);
+  res.render("profile", {user: user});
 };
 
 export const products = (req, res) => {
@@ -41,4 +47,8 @@ export const home = (req, res) => {
 
 export const resetPass = (req, res) => {
   res.render("userRestart");
-}
+};
+
+export const isAdmin = (req, res) => {
+  res.render("isAdmin");
+};

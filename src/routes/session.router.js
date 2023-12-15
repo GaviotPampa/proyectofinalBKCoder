@@ -12,6 +12,9 @@ router
   .get("/error-login", controller.errorLogin)
   .get("/error-register", controller.errorRegister)
   .get("/reset-pass", controller.resetPass)
+  .get('/register-github', controller.githubLogin)
+  .get ('/admin', controller.isAdmin)
+ 
 
  
 /* router.get("/current", controller.sessionCurrent); */

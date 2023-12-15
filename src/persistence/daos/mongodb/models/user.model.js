@@ -37,21 +37,28 @@ const UserSchema = new mongoose.Schema({
     },
   ],
   last_connection: {
-    type: String,
+    type: Date,
+    default: Date.now(),
   },
 
-  cartId: [
+  cart: [
     {
+      product: String,
+      quantity: Number,
       type: mongoose.Schema.Types.ObjectId,
       ref: "carts",
       default: [],
     },
   ],
+  
 
   isGithub: {
     type: Boolean,
     required: true,
     default: false,
+  },
+  image: {
+    type: String,
   },
 });
 

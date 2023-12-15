@@ -1,0 +1,26 @@
+<h1>Admin View</h1>
+<table>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>first_name</th>
+      <th>Email</th>
+      <th>Role</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each users}}
+      <tr>
+        <td>{{id}}</td>
+        <td>{{username}}</td>
+        <td>{{email}}</td>
+        <td>{{role}}</td>
+        <td>
+          <a href="/admin/users/{{id}}/edit">Edit</a>
+          <a href="/admin/users/{{id}}/delete">Delete</a>
+        </td>
+      </tr>
+    {{/each}}
+  </tbody>
+</table>

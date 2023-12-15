@@ -1,29 +1,29 @@
 tags:
- - name: User
-   sumary: Everything about Users
-paths: 
- /api/users:
-  get:
-   tags: 
-     - User
-   summary: Get all users. Obtiene todos los users 
-   responses:	
-    "200":
-      description: Los Users fueron obtenidos satisfactoriamente de la base de datos
-      content:
-       application/json:
-        schema:
-         type: array
-         items:
-          $ref: '#components/schemas/User'
-    "500": 
-      description: Error del servidor
-  post:
-   tags:
-    - User
-   summary: Add a new user to the database
-   responses:	
-    "200":
-     description: Create a new user in the database
-    "500": 
-      description: Error del servidor
+  - name: User
+    sumary: Everything about Users
+paths:
+  /api/users:
+    get:
+      tags:
+        - User
+      summary: Get all users. Obtiene todos los users
+      responses:
+        "200":
+          description: Los Users fueron obtenidos satisfactoriamente de la base de datos
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#components/schemas/User"
+        "500":
+          description: Error del servidor
+    post:
+      tags:
+        - User
+      summary: Add a new user to the database
+      responses:
+        "200":
+          description: Create a new user in the database
+        "500":
+          description: Error del servidor

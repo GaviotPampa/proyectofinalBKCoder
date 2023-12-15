@@ -121,7 +121,7 @@ export const addProdToCart = async (req, res, next) => {
     if (newProdCart && user === user) {
       create(newProdCart);
     }
-    if (newProdCart && user.isPremium && product.owner === user.id) {
+    if (newProdCart  && product.owner === user.id) {
       // Agrega el producto al carrito.
       logger.info(`El producto ${idProduct} fue agregado al carrito`);
       create(res, 200, newProdCart);

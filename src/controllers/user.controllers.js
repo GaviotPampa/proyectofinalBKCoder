@@ -1,4 +1,6 @@
 import logger from "../middlewares/logger-mw.js";
+import mongoose from "mongoose";
+const ObjectId = mongoose.Types.ObjectId
 import UserDao from "../persistence/daos/mongodb/user.dao.js";
 const userDao = new UserDao();
 
@@ -23,8 +25,8 @@ export const getAll = async (req, res, next) => {
 
 export const getById = async (req, res, next) => {
   try {
-    const id = req.params.id;
-    const item = await service.getById(id);
+    const id = req.params._id;
+    const item = await service.getById({'_id': new ObjectId(id)});
     if (!item)
       return httpResponse.NotFound(res, 404, "User not found for id: " + id);
     else httpResponse.Ok(res, item);
@@ -102,30 +104,13 @@ export const login = async (req, res, next) => {
     if (user) {
       req.session.email = email;
       req.session.password = password;
-      /*  return httpResponse.Ok(res, user); */
-      res.redirect("/api/sessions/profile");
+      return httpResponse.Ok(res, user);
+       /*      res.redirect("/api/sessions/profile"); */
+      
     } else res.redirect("/api/sessions/error-login");
     logger.info("login user.controller ok", user);
   } catch (error) {
     logger.error("login failed user.controller".error);
-    next(error);
-  }
-};
-
-export const githubResponse = (req, res, next) => {
-  try {
-    const { first_name, last_name, email, isGithub } = req.user;
-    res.json({
-      msg: "Welcome! Registration/Login GitHub Ok",
-      /*  session: req.session, */
-      userData: {
-        first_name,
-        last_name,
-        email,
-        isGithub,
-      },
-    });
-  } catch (error) {
     next(error);
   }
 };
@@ -143,13 +128,33 @@ export const profile = (req, res, next) => {
   }
 };
 
+export const githubLogin = (req, res, next) => {
+  try {
+    const { first_name, last_name, email, isGithub } = req.user;
+    res.json({
+      msg: "Welcome! Registration/Login GitHub Ok en user.controller",
+      /*  session: req.session, */
+      userData: {
+        first_name,
+        last_name,
+        email,
+        isGithub,
+      },
+    });
+  } catch (error) {
+    next(error);
+  }
+};
+
+//cerrar la sesion del usuario
 export const logout = async (req, res, next) => {
   try {
-    //cerrar la sesion del usuario
-    req.logout();
-    // Redirigir al usuario a la página de inicio de sesión
-    res.redirect("/api/sessions/login");
-    logger.info("logout user.controller ok");
+    req.session.destroy((err) => {
+      if (err) return res.status(404).send(err);
+      console.log(err);
+      res.redirect("/api/sessions/login"); // Redirigir al usuario a la página de inicio de sesión
+      logger.info("logout user.controller ok");
+    });
   } catch (error) {
     logger.error("logout failed user.controller".error);
     next(error);
@@ -187,10 +192,27 @@ export const updatePass = async (req, res, next) => {
   }
 };
 
+export const changeRoleUser = async (req, res, next) => {
+  try {
+    const { uid } = req.params;
+    const user = await service.changeRoleUser(uid);
+    if (!user) {
+      return res.status(404).json({ message: 'Usuario no encontrado' });
+    }
+    user.role = user.role === 'user' ? 'premium' : 'user';
+    await user.save();
+    return res.status(200).json(user);
+  } catch (error) {
+    console.error(error);
+    return res.status(500).json({ message: 'Error interno del servidor' });
+  }
+}
+
 export const uploadDocuments = async (req, res, next) => {
   try {
     /* res.send ({data:" Enviar un document"}); */
     const uid = req.params.uid;
+    const documents = req.body.documents;
     const user = await service.upload({ _id: uid });
     if (!user) {
       return httpResponse.NotFound(res, 404, "NOT_FOUND");
@@ -224,3 +246,18 @@ export const uploadDocuments = async (req, res, next) => {
     next(error.message);
   }
 };
+
+export const  addProdToUserCart =  async (req, res, next)=>{
+  try {
+    const { _id } = req.user;
+    const { pid } = req.params;
+    const { quantity } = req.params;
+    const newProdToUserCart = await service.addProdToUserCart(_id, pid, Number(quantity));
+    console.log(newProdToUserCart);
+    if(!newProdToUserCart) createResponse(res, 404, 'Error add product to user cart');
+    createResponse(res, 200, newProdToUserCart);
+  } catch (error) {
+    logger.error("en user service de addProdToUserCart" ,error);
+    next(error.message);
+  }
+}

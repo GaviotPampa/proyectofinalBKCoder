@@ -55,8 +55,12 @@ const storage = multer.diskStorage({
     const fileExtension = path.extname(file.originalname);
     const fileName = file.originalname.split(fileExtension)[0];
     cb(null, `${fileName} + "." + ${Date.now()}${fileExtension}`);
-    console.log(filename);
   },
+  
 });
+
+export const createResponse = (res, statusCode, data) => {
+  return res.status(statusCode).json({ data });
+};
 
 export const uploader = multer({ storage: storage });

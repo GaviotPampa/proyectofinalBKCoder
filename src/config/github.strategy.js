@@ -18,25 +18,23 @@ const registerOrLogin = async (accessToken, refreshToken, profile, done) => {
     const email =
       profile._json.email !== null ? profile._json.email : profile._json.blog;
     const user = await userDao.getByEmail(email);
-    if (!user) {return done (null, false)}
-    if (user) return done(null, user);
+    if (user)return done (null,user);
+    const fullName = profile._json.name;
+    const parts = fullName.split(' '); 
+    let lastName = '';
+    parts.length > 1 ? lastName = parts.slice(2).join(' ') : lastName = parts[0]; 
     const newUser = await userDao.register({
-      first_name:
-        profile._json.name.split(" ")[0] + " " +profile._json.name.split(" ")[1]
-          ? profile._json.name.split(" ")[0]
-          : "",
-      last_name:
-        profile._json.name.split(" ")[2] + profile._json.name.split(" ")[3]
-          ? profile._json.name.split(" ")[2]
-          : "",
-      email: profile._json.email,
-      password: "",
-      isGithub: true,
+        first_name: profile._json.name.split(' ').slice(0, 2).join(' '),
+        last_name: lastName,
+        email,
+        password: '',
+        isGithub: true,
+        image: profile._json.avatar_url
     });
     return done(null, newUser);
   } catch (error) {
-    done(error);
-    logger.error("error en Github.strategy:",error);
+    logger.error("error en Github.strategy:", error);
+    return done(error);
   }
 };
 

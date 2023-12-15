@@ -1,95 +1,102 @@
 tags:
- - name: Cart
-   sumary: Everything about cart
-paths: 
- /api/carts:
-  get:
-   tags: 
-     - Cart
-   summary: Get all cart.
-   responses:	
-    "200":
-      description: Los productos fueron obtenidos satisfactoriamente del carrito
-      content: 
-       application/json:
-        schema:
-         type: array
-         items:
-          $ref: '#/components/schemas/Cart'
-    "500": 
-      description: Error del servidor
-  post:
-   tags:
-    - Cart
-   summary: Add a new product to the cart
-   responses:	
-    "200":
-     description: Create a new product in the cart
-    "500": 
-      description: Error del servidor
-  put:
-   tags:
-    - Cart
-   summary: Update a product in the cart
-   responses:	
-    "200":
-     description: Create a new product in the cart
-    "500": 
-     description: Error del servidor
-  delete:
-   tags:
-    - Cart
-   summary: Delete a product in the cart
-   responses:
-    "200":
-     description: Delete a product in the cart
-    "500": 
-     description: Error al eliminar product
- /api/carts/:cid:
-  put:
-   tags: 
-     - Cart
-   summary: Get all cart.
-   responses:	
-    "200":
-      description: Los productos fueron obtenidos satisfactoriamente del carrito
-      content: 
-       application/json:
-        schema:
-         type: array
-         items:
-          $ref: '#/components/schemas/Cart'
-    "500": 
-      description: Error del servidor
- /api/carts/:cid/products/:pid:
-  get:
-   tags: 
-     - Cart
-   summary: Get all cart.
-   responses:	
-    "200":
-      description: Los productos fueron obtenidos satisfactoriamente del carrito
-      content: 
-       application/json:
-        schema:
-         type: array
-         items:
-          $ref: '#/components/schemas/Cart'
-    "500": 
-      description: Error del servidor
-  /api/cart/:cid/products/:pid:
-   put:
-    tags: 
-      - Cart
-    summary: Put product in cart.
-    responses:	
-     "200":
-      description: Actualización de un producto satisfactoriamente del carrito
-      content: 
-       application/json:
-        schema:
-         type: array
-         items:
-          $ref: '#/components/schemas/Cart'
-    "500": 
-      description: Error del servidor
+  - name: Cart
+    sumary: Everything about cart
+paths:
+  /api/carts:
+    get:
+      tags:
+        - Cart
+      summary: Get all cart.
+      responses:
+        "200":
+          description: Los productos fueron obtenidos satisfactoriamente del carrito
+        "500":
+          description: Error del servidor
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Cart"
+    post:
+      tags:
+        - Cart
+      summary: Create a Cart
+      responses:
+        "200":
+          description: Create a new  cart
+        "500":
+          description: Error del servidor
+  /api/carts/{:cid}:
+    get:
+      tags:
+        - Cart
+      summary: Get cart by Id.
+      responses:
+        "200":
+          description: El carrito fuero obtenidos satisfactoriamente
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Cart"
+        "500":
+          description: Error del servidor
+    delete:
+      tags:
+        - Cart
+      summary: Delete cart
+      parameters:
+
+      responses:
+        "200":
+          description: Delete all cart
+        "500":
+          description: Error al eliminar el carrito
+  /api/carts/{:cid}/products/{:pid}:
+    get:
+      tags:
+        - Cart
+      summary: Obtener producto del carrito.
+      responses:
+        "200":
+          description: El producto fue obtenido satisfactoriamente en el carrito
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Cart"
+        "500":
+          description: Error del servidor
+    put:
+      tags:
+        - Cart
+      summary: Put product in cart.
+      responses:
+        "200":
+          description: Actualización de un producto satisfactoriamente del carrito
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Cart"
+        "500":
+          description: Error del servidor
+  /api/cart/{:cid}/product/add/{:pid}:
+    put:
+      tags:
+        - Cart
+      sumary: actualiza el producto en el carrito
+      responses:
+        "200":
+          description: Producto actualizado correctamente en el carrito
+        "500":
+          description: Error al actualizar el producto en el carrito
+  /api/cart/{:cid}/products/{:pid}:
+    delete:
+      tags:
+        - Cart
+      sumary: Eliminar del carrito el producto seleccionado por Id

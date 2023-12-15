@@ -3,6 +3,7 @@ import { Strategy as LocalStrategy } from "passport-local";
 import logger from "../middlewares/logger-mw.js";
 
 import UserDao from "../persistence/daos/mongodb/user.dao.js";
+import { UserModel } from "../persistence/daos/mongodb/models/user.model.js";
 const userDao = new UserDao();
 
 const strategyOptions = {
@@ -28,10 +29,10 @@ const register = async (req, email,password, done) => {
 const login = async (req, email, password, done) => {
   try {
     const user = { email, password };
-    logger.info("USER passport.comfig:", user);
+    logger.info("USER passport.config:", user);
     const userLogin = await userDao.login(user);
     logger.info("LOGIN passport.config:", userLogin);
-    if (!userLogin) return done(null, false, { message: "User not found" });
+    if (!userLogin) return done(null, false, { message: "User not found en passport config" });
     return done(null, userLogin);
   } catch (error) {
     logger.error(error);
@@ -48,6 +49,6 @@ passport.serializeUser((user, done) => {
 });
 
 passport.deserializeUser(async (id, done) => {
-  const user = await userDao.getById(id);
+  const user = await UserModel.findByIdAndUpdate(id);
   return done(null, user);
 });

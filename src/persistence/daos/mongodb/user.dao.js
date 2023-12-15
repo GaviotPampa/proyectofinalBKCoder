@@ -15,18 +15,19 @@ export default class UserDao {
     }
   }
 
-  async update(id, obj) {
+  async update(uid, obj) {
     try {
-      await UserModel.updateOne({ _id: id }, obj, { new: true });
+      await UserModel.updateOne(uid, obj, { new: true });
       return obj;
     } catch (error) {
       logger.error(error);
+      throw new Error(error.message);
     }
   }
 
-  async eliminate(id) {
+  async eliminate(uid) {
     try {
-      const response = await UserModel.findByIdAndDelete(id);
+      const response = await UserModel.findByIdAndDelete(uid);
       return response;
     } catch (error) {
       logger.error(error);
@@ -75,9 +76,7 @@ export default class UserDao {
 
   async getById(id) {
     try {
-      const userExist = await UserModel.findById(
-        id
-      ); /* .explain("executionStats") */
+      const userExist = await UserModel.findById(id);
       return userExist;
     } catch (error) {
       logger.error("getById en user.dao", error);
@@ -85,20 +84,9 @@ export default class UserDao {
     }
   }
 
-  async gitHubResponse() {
+  async getByIdDto(uid) {
     try {
-      
-    } catch (error) {
-      throw new Error (error.message);
-      
-    }
-    
-  }
-  async getByIdDto(id) {
-    try {
-      const userExist = await UserModel.findById(
-        id
-      ); 
+      const userExist = await UserModel.findById(uid);
       return userExist;
     } catch (error) {
       logger.error("getByIdDto en user.dao", error);
@@ -121,7 +109,9 @@ export default class UserDao {
 
   async profile(email) {
     try {
-      const userExist = await this.getByEmail({email})/*  UserModel.findOne({ email }) */;
+      const userExist = await this.getByEmail(
+        email
+      ); /*  UserModel.findOne({ email }) */
       console.log(userExist);
       if (userExist) {
         return userExist;
@@ -168,17 +158,36 @@ export default class UserDao {
       throw new Error(error);
     }
   }
-  async upload(id) {
+  async upload(uid) {
     try {
     } catch (error) {
       throw new Error(error);
     }
   }
-  /*   async changeUserRole(user) {
+  async changeRoleUser(uid, user) {
     try {
-
+      const roleUser = await UserModel.findByIdAndUpdate(uid, user, {
+        new: true,
+      });
+      return roleUser;
     } catch (error) {
       throw new Error(error);
     }
-  } */
+  }
+
+  async addProdToUserCart(uid, pid, quantity) {
+    try {
+      const user = await UserModel.findById(uid);
+      if (!user) return false;
+      user.cart.push({
+        _id: pid,
+        quantity,
+      });
+      user.save();
+      return user;
+    } catch (error) {
+      logger.error("error en user dao add prod to cart user");
+      throw new Error(error.message);
+    }
+  }
 }

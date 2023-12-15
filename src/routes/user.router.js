@@ -1,26 +1,31 @@
 import { Router } from "express";
 import passport from "passport";
-import { checkAuth } from "../middlewares/isAuth.js";
+import { checkAuth } from "../middlewares/checkAuth.js";
+import {checkAdmin} from "../middlewares/checkAdmin.js";
+
 /* import { checkUserRole } from "../middlewares/checkUserRole.js";
  */
 import * as controller from "../controllers/user.controllers.js";
 import { uploader } from "../utils.js";
+import { checkUserRole } from "../middlewares/checkUserRole.js";
+import { changeRoleUser } from "../services/user.service.js";
 
 const router = Router();
 
 router
   .get("/", controller.getAll)
-  .get("/:id", controller.getById)
-  .get ("/dtoUser/:id", controller.getByIdDto)
-  .put("/:id", controller.update)
-  .delete("/:id", controller.eliminate)
+  /*     .get("/:id", controller.getById)
+   */ .get("/current/dtoUser/:id", controller.getByIdDto)
+  .put("/admin/users/:id/edit", checkUserRole, controller.update)
+  .delete("/admin/users/:id/delete", checkUserRole, controller.eliminate)
   .post("/register", controller.register)
   .post("/login", controller.login)
   .get("/login", controller.login)
   .get("/register", controller.register)
   .get("/reset-pass", controller.resetPass)
   .post("/reset-pass", checkAuth, controller.resetPass)
-  .put("/update-pass", controller.updatePass);
+  .put("/update-pass", controller.updatePass)
+  .post('/add/:pid/quantity/:quantity', checkAuth,checkUserRole, controller.addProdToUserCart);
 router
   .get("/", (req, res) => {
     const { first_name } = req.body;
@@ -30,38 +35,33 @@ router
   .get(
     "/profile",
     /* checkUserRole */ checkAuth,
-    (req, res) => res.send("profile"),
+    /* (req, res) => res.send("profile"), */
     controller.profile
   )
   .get(
     "/register-github",
     passport.authenticate("github", { scope: ["user:email"] }),
-    controller.githubResponse
-    //(req, res) =>{res.send("profile-github")}
-    //console.log(req.user) en el req.user tenemos los datos del usuario
+    controller.githubLogin
   )
 
   .get(
     "/profile-github",
-    passport.authenticate("github", { scope: ["user:email"] }),
-    controller.githubResponse
-    /* (req, res) => res.send ("Welcome to profile-github")
-     */
+    passport.authenticate("github", {
+      failureRedirect: "/api/sessions/login",
+      successRedirect: "/api/sessions/profile",
+      passReqToCallback: true,
+    })
   )
-  /*   .get("/logout", (req, res) => {
-    req.logout((err) => {
-      if (err) return res.send(err);
-      else res.redirect("/login");
-    }); */
-  .get("/logout", controller.logout)
 
+  .get("/logout", controller.logout)
+  .get("/current", checkAuth, (req, res) => {
+    res.send({ status: "success", payload: req.user });
+  })
   /*ruta en el router de api/users, la cual será /api/users/premium/:uid  la cual permitirá cambiar el rol de un usuario, de “user” a “premium” y viceversa.
    */
   /* sólo actualice al usuario a premium si ya ha cargado los siguientes documentos:
    */
-  /*   .put("/premium/:uid", checkUserRole, controller.); */
-
-  /* }); */
+  .put("/premium/:uid", checkAdmin, controller.changeRoleUser)
 
   /* Crear un endpoint en el router de usuarios api/users/:uid/documents con el método POST que permita subir uno o múltiples archivos. Utilizar el middleware de Multer para poder recibir los documentos que se carguen y actualizar en el usuario su status para hacer saber que ya subió algún documento en particular.
 

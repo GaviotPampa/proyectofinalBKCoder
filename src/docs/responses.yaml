@@ -4,7 +4,7 @@ components:
     Product:
       type: object
       required:
-       - marca
+       - titulo
        - importe
        - codigo
        - estado
@@ -13,41 +13,49 @@ components:
        - owner
       properties:
         _id:
-          type: ObjectId
-          description: Id associated with product autogenerado por Mongo
-        marca:
-          type: string
-          description: nombre del producto
+         type: ObjectId
+         description: Id associated with product,  automatically generated from mongodb
+        titulo:
+         type: string
+         description: Nominl product
+        descripcion:
+         type: string
+         description: Product description  
         importe:
          type: number
-         description: precio del producto
+         description: Precio del producto
         codigo:
          type: string
          description: codigo de identificacion unico del producto
         estado:
-         type: string
-         description: estado del producto
+         type: boolean
+         description: Estado del producto true or false
         stock:
          type: number
          description: cantidad disponible del producto
         categoria:
          type: string
-         description: categoria a la que pertenece el producto
+         description: Clasificación del producto
         owner:
-         type: ObjectId
-         description: nombre del propietario del producto
+         type: Schema.Type.ObjectId
+         ref: user
+         default: admin
+        thumbnails:
+         type: String
+         default: []
         inCart:
          type: boolean
          description: si el producto esta en el carrito de compras
       example:
        _id: ObjectId('6511bb3867bd881e1a572d52')
-       marca: Mochila Urbana
-       import: 15000
+       titulo: Mochila Urbana
+       importe: 15000
        codigo: abcd123
        estado: true
        stock: 1
        categoria: Mochilas
        owner: user
+       thumbnails: Array
        inCart: false
     Cart:
      type: object

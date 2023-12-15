@@ -1,8 +1,11 @@
 import UserDao from "../persistence/daos/mongodb/user.dao.js";
 const userDao = new UserDao();
+import ProdDaoMDB from "../persistence/daos/mongodb/product.dao.js";
+const prodDao = new ProdDaoMDB();
 import logger from "../middlewares/logger-mw.js";
 
 import * as service from "../persistence/repositories/user/user.repository.js";
+import { UserModel } from "../persistence/daos/mongodb/models/user.model.js";
 
 export const getAll = async () => {
   try {
@@ -84,39 +87,21 @@ export const profile = async (req, res) => {
   }
 };
 
-export const githubResponse = async (req, res,next) => {
-  try {
-    // console.log(req.user)
-    const { first_name, last_name, email, isGithub } = req.user;
-    res.json({
-      msg: "Register/Login Github OK",
-      session: req.session,
-      userData: {
-        first_name,
-        last_name,
-        email,
-        isGithub,
-      },
-    });
-  } catch (error) {
-    logger.error(error);
-    next(error);
-  }
-};
+
 export const addCartToUser = async (userId, cartId) => {
   try {
     const cartExists = await userDao.getCartById(cartId);
     const newCart = await userDao.addCartToUser(userId, cartId, true);
-    if (!cartExists) throw new Error(`The cart does not exist.`);
+    if (!cartExists)  return false;/* throw new Error(`The cart does not exist.`); */
     else return newCart;
   } catch (error) {
     console.log(error.message);
   }
 };
 
-export const getByIdDto = async (id) => {
+export const getByIdDto = async (uid) => {
   try {
-    const user = await service.getByIdDto(id);
+    const user = await service.getByIdDto(uid);
     if (!user) return false;
     else return user;
   } catch (error) {
@@ -143,6 +128,14 @@ export const updatePass = async (user, password) => {
   }
 };
 
+/* export const lastLogin = async (user) => {
+  try {
+    
+  } catch (error) {
+    throw new Error(error.message);
+  }
+}; */
+
 export const upload = async (id) => {
   try {
     const item = await userDao.upload(id);
@@ -152,3 +145,22 @@ export const upload = async (id) => {
     logger.error(error);
   }
 };
+
+export const changeRoleUser = async (uid)=>{
+  try {
+    const user = await userDao.findById(uid);
+    if (!user) return false;
+  } catch (error) {
+    logger.error(error);
+  }
+};
+
+export const  addProdToUserCart = async(uid, pid, quantity) =>{
+  try {
+    const existProd = await UserModel.getById(pid);
+    if(!existProd) return false;
+    return userDao.addProdToUserCart(uid, pid, quantity);
+  } catch (error) {
+    logger.error("en user service de addProdToUserCart",error);
+  }
+}

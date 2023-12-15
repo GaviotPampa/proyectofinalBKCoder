@@ -19,21 +19,23 @@
         onclick="location.href='/api/sessions/profile'"
       >Login</button>
     </div>
+
   </form>
   <div class="form">
-    <div class="login">
-      <button
-        class="login button"
-        onclick="location.href='/api/users/register-github'"
-      >entrar con Github</button>
-    </div>
-    <div class="container-new">
-      <h2 class="new-user">¿Usuario nuevo?</h2>
-    </div>
+
+  </div>
+  <div class="container-new">
+    <h2 class="new-user">¿Usuario nuevo?</h2>
+  </div>
+  <div class="register">
     <div class="register">
       <button
         class="button btn-secundary"
-        onclick="location.href='/api/user/reset-pass'"
+        onclick="window.location.href = '/api/users/register-github';"
+      >Entrar con Github</button>
+      <button
+        class="button btn-secundary"
+        onclick="location.href='/api/sessions/reset-pass'"
       >¿Olvidaste la contraseña?</button>
     </div>
     <div class="register">

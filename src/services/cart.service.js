@@ -12,9 +12,9 @@ export const getAll = async () => {
   }
 };
 
-export const getById = async (pid) => {
+export const getById = async (cid) => {
   try {
-    const item = await cartDao.getById(pid);
+    const item = await cartDao.getById(cid);
     if (!item) return false;
     else return item;
   } catch (error) {

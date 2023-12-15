@@ -3,6 +3,7 @@ const router = Router();
 import { checkUserRole } from "../middlewares/checkUserRole.js";
 
 import * as controller from "../controllers/product.controllers.js";
+import { checkAdmin } from "../middlewares/checkAdmin.js";
 
 router
   .get("/", controller.getAllProd)
@@ -19,11 +20,11 @@ router
     controller.addProdToCart
   )
   /* Sólo el administrador puede crear, actualizar y eliminar productos */
-  /* .post("/", */ /* checkUserRole,  *//* controller.createProd) */
-  .post("/", /* checkUserRole,  */controller.createProdDto)
-  .put("/:pid", /* checkUserRole, */ controller.update)
+  /* .post("/", */ /* checkAdmin,  *//* controller.createProd) */
+  .post("/", checkAdmin, controller.createProdDto)
+  .put("/:pid", checkAdmin, controller.update)
 
-  .delete("/:id", checkUserRole, controller.expunge)
+  .delete("/:pid", checkAdmin, controller.expunge)
 
   .get("/paginate", controller.getPaginate);
 
